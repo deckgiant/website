@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Gallery | Deck Giant</title>
+<meta name="description" content="See custom decks, pergolas, carports, and pavilions built by Deck Giant for homeowners across the Denver metro and Colorado Front Range.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Deck Giant",
+  "description": "Custom deck, pergola, and carport builder serving the Denver metro area and the Colorado Front Range.",
+  "areaServed": ["Littleton, CO", "Highlands Ranch, CO", "Castle Rock, CO", "Centennial, CO", "Parker, CO", "Lone Tree, CO", "Lakewood, CO", "Englewood, CO", "Denver, CO", "Evergreen, CO", "Morrison, CO", "Golden, CO", "Boulder, CO", "Colorado Front Range"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Littleton",
+    "addressRegion": "CO",
+    "addressCountry": "US"
+  },
+  "telephone": "[PHONE NUMBER]",
+  "priceRange": "$$"
+}
+</script>
+
+<style>
+  :root{
+    --ink:#12151a;
+    --ink-soft:#1c2028;
+    --blue:#1a4fa8;
+    --blue-deep:#123a7e;
+    --cedar:#fb4f14;
+    --cedar-deep:#c93d0d;
+    --paper:#eef0f2;
+    --paper-white:#f9fafb;
+    --slate:#3a4048;
+    --slate-soft:#69707a;
+    --line:#dde1e5;
+    --line-dark:#333941;
+    --heading:#2b2f37;
+    --charcoal:#383d44;
+    --display:'Archivo Black', 'Space Grotesk', sans-serif;
+    --body:'Inter', sans-serif;
+    --mono:'IBM Plex Mono', monospace;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);
+    color:var(--slate);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 28px;}
+  h1,h2,h3{font-family:var(--display); color:var(--heading); line-height:1.15; font-weight:700;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:14.5px;
+    letter-spacing:.13em;
+    text-transform:uppercase;
+    color:var(--blue);
+    font-weight:700;
+  }
+  .eyebrow.on-dark{color:#8fc4e8;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--mono);
+    font-size:13.5px; font-weight:600; letter-spacing:.03em;
+    padding:14px 26px;
+    border-radius:var(--radius);
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:all .15s ease;
+  }
+  .btn-primary{background:var(--blue); color:#fff;}
+  .btn-primary:hover{background:var(--blue-deep);}
+  .btn-outline{border-color:var(--ink); color:var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:#fff;}
+  .btn-outline.on-dark{border-color:#fff; color:#fff;}
+  .btn-outline.on-dark:hover{background:#fff; color:var(--ink);}
+
+  /* ---------- HEADER ---------- */
+  header{background:var(--ink); position:sticky; top:0; z-index:50; border-bottom:3px solid var(--blue);}
+  .header-top{display:flex; align-items:center; justify-content:space-between; padding:10px 28px; gap:20px; flex-wrap:wrap;}
+  .logo-block{display:flex; align-items:center; gap:14px;}
+  .logo-block img{height:130px; width:auto; filter:invert(1);}
+  .header-logo-icon{height:64px !important; margin-left:14px;}
+  .header-actions{display:flex; align-items:center; gap:16px; flex-wrap:wrap;}
+  .nav-cta{
+    font-family:var(--mono); font-size:12px; font-weight:600; letter-spacing:.03em;
+    background:var(--blue); color:#fff; padding:11px 18px; border-radius:var(--radius);
+    text-transform:uppercase; white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--blue-deep);}
+  .nav-phone{font-family:var(--mono); font-size:13.5px; color:#fff; font-weight:600; white-space:nowrap; line-height:1.4; text-align:right;}
+  .nav-phone .call-label{display:block; font-size:10px; color:#9aa4ad; font-weight:600; letter-spacing:.04em; text-transform:uppercase;}
+  .header-nav{background:var(--ink-soft); border-top:1px solid var(--line-dark);}
+  .nav-links{display:flex; flex-wrap:wrap; justify-content:center; gap:8px 26px; padding:12px 28px;}
+  .nav-links a{
+    font-family:var(--mono); font-size:11.5px; color:#c7ccd1;
+    letter-spacing:.03em; text-transform:uppercase; transition:color .15s; white-space:nowrap;
+  }
+  .nav-links a:hover{color:#fff;}
+  .nav-item{position:relative;}
+  .nav-item > a::after{content:" \25BE"; font-size:9px; vertical-align:2px;}
+  .nav-dropdown{
+    display:none; position:absolute; top:100%; left:0; padding-top:10px; min-width:180px; z-index:100;
+  }
+  .nav-item:hover .nav-dropdown,
+  .nav-item:focus-within .nav-dropdown{display:block;}
+  .nav-dropdown-inner{
+    background:var(--ink-soft); border:1px solid var(--line-dark); border-top:2px solid var(--blue);
+    border-radius:var(--radius); padding:8px 0; box-shadow:0 10px 24px rgba(0,0,0,.25);
+  }
+  .nav-dropdown-inner a{
+    display:block; padding:10px 18px; font-size:12px; text-transform:none;
+    letter-spacing:.02em; color:#c7ccd1; white-space:nowrap;
+  }
+  .nav-dropdown-inner a:hover{background:rgba(255,255,255,.06); color:#fff;}
+  @media (max-width:700px){
+    .nav-item > a::after{display:none;}
+    .nav-dropdown{
+      display:block; position:static; padding-top:0; min-width:0;
+    }
+    .nav-dropdown-inner{
+      background:none; border:none; box-shadow:none; padding:2px 0 0 14px;
+    }
+    .nav-dropdown-inner a{padding:6px 0; color:#9aa4ad;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:44px 0 88px; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;}
+  .hero h1{font-size:44px; margin:16px 0 20px; letter-spacing:-.01em;}
+  .hero h1 .accent{color:var(--blue);}
+  .hero p.lede{font-size:17px; color:var(--slate-soft); max-width:46ch; margin-bottom:30px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:38px;}
+  .trust-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:28px;}
+  .trust-card{
+    border:1px solid var(--line); background:var(--paper-white); border-radius:var(--radius);
+    padding:16px 14px; border-top:3px solid var(--blue);
+  }
+  .trust-card.accent-cedar{border-top-color:var(--cedar);}
+  .trust-card svg{width:20px; height:20px; stroke:var(--blue); margin-bottom:10px; display:block;}
+  .trust-card.accent-cedar svg{stroke:var(--cedar);}
+  .trust-card .stat{font-family:var(--display); font-size:18px; font-weight:700; color:var(--heading); display:block; line-height:1.2;}
+  .trust-card .label{font-family:var(--mono); font-size:11px; color:var(--slate-soft); letter-spacing:.02em; margin-top:2px; display:block;}
+  @media (max-width:640px){
+    .trust-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
+  .hero-visual{position:relative;}
+  .photo-stack{position:relative; display:grid; gap:14px;}
+  .photo-slot{
+    background:linear-gradient(135deg,#dfe3e6,#c9ced2);
+    border:1px solid #c3c9cd;
+    aspect-ratio:16/10;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:11.5px; color:#7c8790;
+    text-align:center; padding:10px; position:relative;
+    border-radius:var(--radius);
+  }
+  .spec-tag{
+    position:absolute; background:var(--ink); color:#fff;
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.04em;
+    padding:6px 10px; border-radius:var(--radius);
+    display:flex; align-items:center; gap:6px;
+    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    white-space:nowrap;
+  }
+  .spec-tag::before{content:"";width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0;}
+  .tag-1{top:-14px; left:14px;}
+  .tag-2{bottom:-14px; right:14px;}
+  .tag-3{bottom:-14px; right:14px;}
+
+  /* ---------- SECTION HEADERS (dark, blue accent) ---------- */
+  .section-head{background:var(--charcoal); padding:38px 0;}
+  .section-head .wrap{display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+  .section-head h2{color:#fff; font-size:28px;}
+  .section-head .eyebrow{margin-bottom:8px; display:block;}
+  .section-head p{color:#a8b0b8; font-family:var(--mono); font-size:12.5px; max-width:38ch;}
+
+  /* ---------- SERVICES ---------- */
+  .services{padding:64px 0 20px; background:var(--paper-white);}
+  .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .service-grid-4{grid-template-columns:repeat(4,1fr);}
+  @media (max-width:1000px){
+    .service-grid-4{grid-template-columns:repeat(2,1fr);}
+  }
+  .service-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+    padding:0; overflow:hidden; display:flex; flex-direction:column;
+  }
+  .service-photo{
+    aspect-ratio:4/3; background:linear-gradient(135deg,#e2e6e8,#ccd1d4);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:11px; color:#818b93; text-align:center; padding:12px;
+    border-bottom:3px solid var(--blue); overflow:hidden;
+  }
+  .service-photo.square{aspect-ratio:8/5;}
+  .service-body{padding:26px;}
+  .photo-caption{font-family:var(--mono); font-size:10px; color:var(--slate-soft); font-style:italic; padding:8px 26px 0;}
+  .service-num{font-family:var(--mono); font-size:13.5px; color:var(--blue); letter-spacing:.08em; margin-bottom:10px; display:block; font-weight:600;}
+  .service-card h3{font-size:21px; margin-bottom:10px;}
+  .service-card p{font-size:14.5px; color:var(--slate-soft); margin-bottom:16px;}
+  .service-list{margin-bottom:20px;}
+  .service-list li{
+    font-size:13.5px; color:var(--slate); padding-left:16px; position:relative; margin-bottom:6px;
+  }
+  .service-list li::before{content:"—"; position:absolute; left:0; color:var(--blue);}
+  .service-link{font-family:var(--mono); font-size:12.5px; font-weight:600; color:var(--blue); border-bottom:1px solid var(--blue); padding-bottom:2px;}
+  .service-link:hover{color:var(--blue-deep); border-color:var(--blue-deep);}
+
+  /* ---------- WHY / TRUST ---------- */
+  .why{background:var(--charcoal); color:#fff; padding:64px 0;}
+  .why-grid{display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:start;}
+  .why h2{color:#fff; font-size:30px; margin-bottom:16px;}
+  .why > .wrap > .why-grid > div:first-child p{color:#aeb6bd; font-size:15px; max-width:40ch;}
+  .why-list{display:grid; grid-template-columns:1fr 1fr; gap:22px 28px;}
+  .why-item{border-left:2px solid var(--blue); padding-left:16px;}
+  .why-item h4{font-family:var(--display); font-size:16px; color:#fff; margin-bottom:6px; font-weight:600;}
+  .why-item p{font-size:13.5px; color:#9aa4ad;}
+
+  /* ---------- SERVICE AREA ---------- */
+  .area{padding:64px 0; background:var(--paper-white);}
+  .area-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
+  .area h2{font-size:28px; margin-bottom:14px;}
+  .area p{font-size:15px; color:var(--slate-soft); margin-bottom:20px; max-width:48ch;}
+  .city-chips{display:flex; flex-wrap:wrap; gap:10px;}
+  .city-chips span{
+    font-family:var(--mono); font-size:12px; color:var(--ink);
+    border:1px solid var(--line); padding:8px 14px; border-radius:var(--radius);
+    background:var(--paper);
+  }
+  .map-slot{
+    aspect-ratio:1/1; background:repeating-linear-gradient(45deg,#eceff1,#eceff1 10px,#e4e8ea 10px,#e4e8ea 20px);
+    border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:12px; color:#8b949c; text-align:center; padding:20px;
+    border-radius:var(--radius);
+  }
+
+  /* ---------- GALLERY ---------- */
+  .gallery{padding:20px 0 64px; background:var(--paper-white);}
+  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  .gallery-item{
+    aspect-ratio:4/3; background:linear-gradient(135deg,#e2e6e8,#ccd1d4);
+    display:flex; align-items:center; justify-content:center; padding:10px; text-align:center;
+    font-family:var(--mono); font-size:10.5px; color:#818b93; border-radius:var(--radius);
+    border:1px solid var(--line); overflow:hidden;
+  }
+  .gallery-item.wide{grid-column:span 2;}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials{background:var(--paper); padding:64px 0;}
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .testi-card{background:var(--paper-white); border:1px solid var(--line); padding:26px; border-radius:var(--radius); border-top:3px solid var(--cedar);}
+  .testi-card p{font-size:14.5px; color:var(--slate); font-style:italic; margin-bottom:16px;}
+  .testi-name{font-family:var(--mono); font-size:12px; color:var(--slate-soft); letter-spacing:.03em;}
+  .testi-name b{color:var(--ink); font-style:normal;}
+  .placeholder-note{font-family:var(--mono); font-size:11px; color:var(--cedar); text-align:center; margin-top:20px;}
+
+  /* ---------- CTA BANNER ---------- */
+  .cta-banner{background:var(--charcoal); padding:56px 0; text-align:center;}
+  .cta-banner h2{color:#fff; font-size:30px; margin-bottom:12px;}
+  .cta-banner p{font-family:var(--mono); color:#dcebf5; font-size:13.5px; margin-bottom:26px;}
+  .cta-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .cta-banner .btn-primary{background:var(--ink);}
+  .cta-banner .btn-primary:hover{background:#000;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink); color:#9aa4ad; padding:52px 0 24px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--line-dark);}
+  footer img{height:72px; width:auto; filter:invert(1); margin-bottom:14px;}
+  .footer-grid p{font-size:13px; line-height:1.7; max-width:32ch;}
+  .footer-col h5{font-family:var(--mono); font-size:11.5px; color:#fff; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
+  .footer-col a{display:block; font-size:13.5px; margin-bottom:10px; color:#9aa4ad;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{display:flex; justify-content:space-between; padding-top:22px; font-family:var(--mono); font-size:11.5px; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:640px){
+    .nav-links{gap:6px 16px; padding:10px 20px;}
+    .nav-links a{font-size:10.5px;}
+    .nav-cta{padding:9px 13px; font-size:10.5px;}
+  }
+  @media (max-width:900px){
+    .hero-grid, .why-grid, .area-grid{grid-template-columns:1fr;}
+    .service-grid, .testi-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .why-list{grid-template-columns:1fr;}
+    .hero h1{font-size:32px;}
+    .logo-block img{height:80px;}
+    .header-logo-icon{height:48px !important;}
+    .hero-logo-banner{max-height:110px !important;}
+    .logo-photo-banner{height:340px !important;}
+    .nav-phone{display:none;}
+  }
+  @media (max-width:520px){
+    .footer-grid{grid-template-columns:1fr;}
+    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .btn{transition:none;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top wrap" style="padding-left:0;padding-right:0;">
+    <div class="logo-block">
+      <img src="dg-icon-logo.png" alt="Deck Giant logo" class="header-logo-icon">
+    </div>
+    <div class="header-actions">
+      <a href="tel:+17207721511" class="nav-phone"><span class="call-label">Call or Text</span>720.772.1511</a>
+      <a href="contact.html" class="nav-cta">Free Consultation</a>
+    </div>
+  </div>
+  <div class="header-nav">
+    <div class="wrap" style="padding:0;">
+      <ul class="nav-links">
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="nav-item">
+          <a href="decks.html">Our Services</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="decks.html">Decks</a>
+              <a href="pergolas.html">Pergolas</a>
+              <a href="carports.html">Carports</a>
+              <a href="pavilions.html">Pavilions</a>
+              <a href="upgrades.html">Upgrades</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="our-process.html">Our Process</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- ============ HERO ============ -->
+<section class="hero" style="padding:56px 0 40px;">
+  <div class="wrap" style="max-width:760px;">
+    <h1 style="font-size:38px;">Our <span class="accent">Work.</span></h1>
+    <p class="lede">A look at real decks, pergolas, carports, and pavilions built by Deck Giant across the Denver metro and the Colorado Front Range.</p>
+  </div>
+</section>
+
+<!-- ============ DECKS ============ -->
+<div class="section-head">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Our Work</span>
+      <h2>Decks</h2>
+    </div>
+    <p><a href="decks.html" style="color:#8fc4e8;">See our Decks page →</a></p>
+  </div>
+</div>
+<section class="services" style="padding-bottom:24px;">
+  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="deck-pergola-privacy-blind.webp" alt="Custom deck with pergola and cedar privacy wall built by Deck Giant" width="1200" height="684" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Custom deck with an attached pergola and a full cedar privacy wall for extra shade and backyard privacy.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="multi-level-cedar-deck-landscape.webp" alt="Multi-level cedar deck built by Deck Giant" width="1200" height="692" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Multi-level cedar deck connecting two elevations in the yard with a built-in step transition between them.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="steep-slope-deck-morrison-co.webp" alt="Second-floor deck built into a granite hillside near Morrison, CO by Deck Giant" width="1000" height="1334" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Second-floor deck attached to a granite hillside near Morrison, CO — custom footers anchored directly into solid rock.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="garapa-deck-cedar-pergola-v2.webp" alt="Custom Garapa exotic hardwood deck built by Deck Giant" width="700" height="840" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Garapa exotic hardwood deck paired with a cedar pergola, finished with a custom stain to enrich the natural color.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="composite-deck-steps-white-railing.webp" alt="Composite deck with staircase and white metal-baluster railing" width="900" height="1545" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Composite deck with a full staircase down to grade and a clean white metal-baluster railing.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="wraparound-pine-deck-evergreen.webp" alt="Wrap-around pine deck built by Deck Giant in Evergreen, CO" width="900" height="900" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Wrap-around pressure-treated pine deck built on a mountain property in Evergreen, CO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERGOLAS ============ -->
+<div class="section-head">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Our Work</span>
+      <h2>Pergolas</h2>
+    </div>
+    <p><a href="pergolas.html" style="color:#8fc4e8;">See our Pergolas page →</a></p>
+  </div>
+</div>
+<section class="services" style="padding-bottom:24px;">
+  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="custom-shape-cedar-pool-pergola-v2.webp" alt="Large custom-shape cedar pergola built by Deck Giant next to a pool" width="1200" height="667" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Large custom-shape cedar pergola built alongside a pool, with a bent roofline that follows the patio layout.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="black-frame-pergola-pool-privacy.webp" alt="Modern black-frame pergola with cedar privacy wall by a pool, built by Deck Giant" width="900" height="1016" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern black-frame pergola with a cedar privacy wall, built next to a pool.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="freestanding-pergola-red-stain-firepit.webp" alt="Freestanding red-stained pergola with privacy wall and fire pit built by Deck Giant" width="900" height="662" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Freestanding pergola with a custom red stain, cedar privacy wall, and a stone fire pit below.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="attached-pergola-brick-house.webp" alt="Custom attached pergola built by Deck Giant against a brick house" width="900" height="578" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pergola attached to a brick home with a bay window tie-in and a clear polycarbonate roof.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="cedar-pergola-unstained-pool.webp" alt="Unstained cedar pergola built by Deck Giant next to a pool" width="900" height="619" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Unstained cedar pergola built next to a pool, left natural to weather to a soft silvery grey over time.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="treated-pine-pergola-deck-unstained.webp" alt="Unstained pressure-treated pine pergola and deck built by Deck Giant" width="900" height="675" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Unfinished treated pine pergola built over a matching deck, ready for the homeowner's choice of stain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARPORTS ============ -->
+<div class="section-head">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Our Work</span>
+      <h2>Carports</h2>
+    </div>
+    <p><a href="carports.html" style="color:#8fc4e8;">See our Carports page →</a></p>
+  </div>
+</div>
+<section class="services" style="padding-bottom:24px;">
+  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="gable-carport-with-suv.webp" alt="Gable-style cedar carport built by Deck Giant" width="900" height="574" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Gable-roof cedar carport, sized to comfortably cover a full-size SUV.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/814;">
+        <img src="attached-carport-storage-enclosure.webp" alt="Attached carport with cedar storage enclosure built by Deck Giant" width="900" height="814" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Attached carport with a built-in cedar storage enclosure along one side.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="custom-carport-metal-roof.webp" alt="Detached carport with metal roof built by Deck Giant" width="640" height="400" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Detached carport with a metal roof, built beside the driveway.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAVILIONS ============ -->
+<div class="section-head">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Our Work</span>
+      <h2>Pavilions</h2>
+    </div>
+    <p><a href="pavilions.html" style="color:#8fc4e8;">See our Pavilions page →</a></p>
+  </div>
+</div>
+<section class="services" style="padding-bottom:24px;">
+  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="cedar-pavilion-pool-outdoor-kitchen.webp" alt="Cedar pavilion with outdoor kitchen overlooking a pool, built by Deck Giant" width="900" height="432" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pavilion with a full outdoor kitchen, overlooking an infinity pool.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="custom-outdoor-pavilion-pool-fireplace.webp" alt="Large custom outdoor pavilion with stone fireplace built by Deck Giant" width="800" height="447" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Large outdoor pavilion with a stone fireplace surround, set beside the pool.</p>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
+        <img src="covered-pavilion-tongue-groove-ceiling.webp" alt="Gable roof pavilion with tongue and groove ceiling built by Deck Giant" width="800" height="480" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Gable-roof pavilion with a finished tongue-and-groove ceiling and recessed lighting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>Free On-Site Consultation</h2>
+    <p style="margin-top:4px;">FREE PRELIMINARY QUOTE VIA EMAIL OR PHONE</p>
+    <div class="cta-actions">
+      <a href="tel:+17207721511" class="btn btn-primary">Call 720.772.1511</a>
+      <a href="contact.html" class="btn btn-outline on-dark">Schedule a Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img src="deckgiant-logo-v2.png" alt="Deck Giant logo">
+        <p>Custom decks, pergolas, carports, and pavilions for the Denver metro and the Colorado Front Range. Licensed, insured, and locally owned.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="decks.html">Decks</a>
+        <a href="pergolas.html">Pergolas</a>
+        <a href="carports.html">Carports</a>
+        <a href="pavilions.html">Pavilions</a>
+        <a href="upgrades.html">Upgrades</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="gallery.html">Gallery</a>
+        <a href="our-process.html">Our Process</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="faq.html">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="tel:+17207721511">720.772.1511</a>
+        <a href="mailto:info@deckgiant.com">info@deckgiant.com</a>
+        <a href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Deck Giant. All rights reserved.</span>
+      <span>Insured</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
