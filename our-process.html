@@ -112,12 +112,18 @@
   }
   .nav-links a:hover{color:#fff;}
   .nav-item{position:relative;}
-  .nav-item > a::after{content:" \25BE"; font-size:9px; vertical-align:2px;}
+  .nav-details{position:relative;}
+  .nav-details summary{
+    list-style:none; cursor:pointer; font-family:var(--mono); font-size:11.5px;
+    letter-spacing:.03em; text-transform:uppercase; color:#c7ccd1; white-space:nowrap;
+  }
+  .nav-details summary::-webkit-details-marker{display:none;}
+  .nav-details summary:hover{color:#fff;}
+  .nav-details summary::after{content:" \25BE"; font-size:9px; vertical-align:2px;}
   .nav-dropdown{
     display:none; position:absolute; top:100%; left:0; padding-top:10px; min-width:180px; z-index:100;
   }
-  .nav-item:hover .nav-dropdown,
-  .nav-item:focus-within .nav-dropdown{display:block;}
+  .nav-details:hover .nav-dropdown{display:block;}
   .nav-dropdown-inner{
     background:var(--ink-soft); border:1px solid var(--line-dark); border-top:2px solid var(--blue);
     border-radius:var(--radius); padding:8px 0; box-shadow:0 10px 24px rgba(0,0,0,.25);
@@ -128,10 +134,12 @@
   }
   .nav-dropdown-inner a:hover{background:rgba(255,255,255,.06); color:#fff;}
   @media (max-width:700px){
-    .nav-item > a::after{display:none;}
+    .nav-details summary{font-size:10.5px;}
+    .nav-details summary::after{display:none;}
     .nav-dropdown{
-      display:block; position:static; padding-top:0; min-width:0;
+      display:none; position:static; padding-top:6px; min-width:0;
     }
+    .nav-details[open] .nav-dropdown{display:block;}
     .nav-dropdown-inner{
       background:none; border:none; box-shadow:none; padding:2px 0 0 14px;
     }
@@ -331,7 +339,7 @@
 <header>
   <div class="header-top wrap" style="padding-left:0;padding-right:0;">
     <div class="logo-block">
-      <img src="dg-icon-logo.png" alt="Deck Giant logo" class="header-logo-icon">
+      <a href="index.html"><img src="dg-icon-logo.png" alt="Deck Giant logo" class="header-logo-icon"></a>
     </div>
     <div class="header-actions">
       <a href="tel:+17207721511" class="nav-phone"><span class="call-label">Call or Text</span>720.772.1511</a>
@@ -343,21 +351,24 @@
       <ul class="nav-links">
         <li><a href="gallery.html">Gallery</a></li>
         <li class="nav-item">
-          <a href="decks.html">Our Services</a>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-inner">
-              <a href="decks.html">Decks</a>
-              <a href="pergolas.html">Pergolas</a>
-              <a href="carports.html">Carports</a>
-              <a href="pavilions.html">Pavilions</a>
-              <a href="upgrades.html">Upgrades</a>
+          <details class="nav-details">
+            <summary>Our Services</summary>
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-inner">
+                <a href="decks.html">Decks</a>
+                <a href="pergolas.html">Pergolas</a>
+                <a href="carports.html">Carports</a>
+                <a href="pavilions.html">Pavilions</a>
+                <a href="upgrades.html">Upgrades</a>
+              </div>
             </div>
-          </div>
+          </details>
         </li>
         <li><a href="our-process.html">Our Process</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="faq.html">FAQ</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -476,7 +487,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <img src="deckgiant-logo-v2.png" alt="Deck Giant logo">
+        <a href="index.html"><img src="deckgiant-logo-v2.png" alt="Deck Giant logo"></a>
         <p>Custom decks, pergolas, carports, and pavilions for the Denver metro and the Colorado Front Range. Licensed, insured, and locally owned.</p>
       </div>
       <div class="footer-col">
