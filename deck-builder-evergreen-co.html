@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Deck Giant | Custom Decks, Pergolas & Carports in Denver Metro & Colorado Front Range</title>
-<meta name="description" content="Deck Giant builds custom decks, pergolas, and carports for homeowners in Littleton, Highlands Ranch, Evergreen, Morrison, Golden, and across the south Denver metro. Licensed, insured, free estimates.">
-<link rel="canonical" href="https://thedeckgiant.com/">
+<title>Deck Builder in Evergreen, CO | Steep Lot Specialists | Deck Giant</title>
+<meta name="description" content="Deck Giant builds custom decks for steep, rocky mountain lots in Evergreen, CO — engineered footings, tall support posts, and framing designed for the terrain. Free consultation.">
+<link rel="canonical" href="https://thedeckgiant.com/deck-builder-evergreen-co.html">
 <link rel="icon" type="image/png" href="dg-favicon-square.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,8 @@
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "Deck Giant",
-  "description": "Custom deck, pergola, and carport builder serving the Denver metro area and the Colorado Front Range.",
+  "description": "Custom deck builder specializing in steep, rocky mountain lots in Evergreen, CO and the surrounding foothills.",
+  "url": "https://thedeckgiant.com/deck-builder-evergreen-co.html",
   "areaServed": ["Littleton, CO", "Highlands Ranch, CO", "Castle Rock, CO", "Centennial, CO", "Parker, CO", "Lone Tree, CO", "Lakewood, CO", "Englewood, CO", "Denver, CO", "Evergreen, CO", "Morrison, CO", "Golden, CO", "Boulder, CO", "Colorado Front Range"],
   "address": {
     "@type": "PostalAddress",
@@ -148,25 +149,15 @@
   }
 
   /* ---------- HERO ---------- */
-  .hero{padding:44px 0 88px; overflow:hidden;}
-  .hero-grid{display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;}
+  .hero{padding:76px 0 88px; overflow:hidden;}
+  .hero-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:center;}
   .hero h1{font-size:44px; margin:16px 0 20px; letter-spacing:-.01em;}
   .hero h1 .accent{color:var(--blue);}
   .hero p.lede{font-size:17px; color:var(--slate-soft); max-width:46ch; margin-bottom:30px;}
   .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:38px;}
-  .trust-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:28px;}
-  .trust-card{
-    border:1px solid var(--line); background:var(--paper-white); border-radius:var(--radius);
-    padding:16px 14px; border-top:3px solid var(--blue);
-  }
-  .trust-card.accent-cedar{border-top-color:var(--cedar);}
-  .trust-card svg{width:20px; height:20px; stroke:var(--blue); margin-bottom:10px; display:block;}
-  .trust-card.accent-cedar svg{stroke:var(--cedar);}
-  .trust-card .stat{font-family:var(--display); font-size:18px; font-weight:700; color:var(--heading); display:block; line-height:1.2;}
-  .trust-card .label{font-family:var(--mono); font-size:11px; color:var(--slate-soft); letter-spacing:.02em; margin-top:2px; display:block;}
-  @media (max-width:640px){
-    .trust-grid{grid-template-columns:repeat(2,1fr);}
-  }
+  .trust-bar{display:flex; gap:32px; flex-wrap:wrap; padding-top:26px; border-top:1px solid var(--line);}
+  .trust-item{font-family:var(--mono); font-size:12px; color:var(--slate-soft); letter-spacing:.03em;}
+  .trust-item b{display:block; font-family:var(--display); font-size:22px; color:var(--heading); font-weight:700;}
 
   .hero-visual{position:relative;}
   .photo-stack{position:relative; display:grid; gap:14px;}
@@ -190,7 +181,7 @@
   .spec-tag::before{content:"";width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0;}
   .tag-1{top:-14px; left:14px;}
   .tag-2{bottom:-14px; right:14px;}
-  .tag-3{bottom:-14px; right:14px;}
+  .tag-3{top:50%; right:-14px; transform:translateY(-50%);}
 
   /* ---------- SECTION HEADERS (dark, blue accent) ---------- */
   .section-head{background:var(--charcoal); padding:38px 0;}
@@ -202,9 +193,17 @@
   /* ---------- SERVICES ---------- */
   .services{padding:64px 0 20px; background:var(--paper-white);}
   .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .terrain-split{display:grid; grid-template-columns:1.1fr .9fr;}
   .service-grid-4{grid-template-columns:repeat(4,1fr);}
+  .compare-grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:900px){
+    .compare-grid-3{grid-template-columns:1fr;}
+  }
   @media (max-width:1000px){
     .service-grid-4{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:640px){
+    .service-grid-2{grid-template-columns:1fr;}
   }
   .service-card{
     background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
@@ -216,8 +215,19 @@
     font-family:var(--mono); font-size:11px; color:#818b93; text-align:center; padding:12px;
     border-bottom:3px solid var(--blue); overflow:hidden;
   }
+  .service-photo.square{aspect-ratio:6/5;}
   .service-body{padding:26px;}
-  .photo-caption{font-family:var(--mono); font-size:10px; color:var(--slate-soft); font-style:italic; padding:8px 4px 0;}
+  .photo-caption{font-family:var(--mono); font-size:10px; color:var(--slate-soft); font-style:italic; padding:8px 26px 0;}
+  .terrain-specialty-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
+  .terrain-specialty-grid > div{border-left:2px solid var(--blue); padding-left:14px;}
+  .terrain-specialty-grid.on-dark > div{border-left-color:#8fc4e8;}
+  .terrain-specialty-grid .eyebrow{display:block; margin-bottom:6px;}
+  .terrain-specialty-grid p{font-size:13.5px; color:var(--slate); line-height:1.5;}
+  .terrain-specialty-grid.on-dark p{color:#aeb6bd;}
+  @media (max-width:700px){
+    .terrain-specialty-grid{grid-template-columns:1fr;}
+  }
+  .service-grid-2{grid-template-columns:repeat(2,1fr);}
   .service-num{font-family:var(--mono); font-size:13.5px; color:var(--blue); letter-spacing:.08em; margin-bottom:10px; display:block; font-weight:600;}
   .service-card h3{font-size:21px; margin-bottom:10px;}
   .service-card p{font-size:14.5px; color:var(--slate-soft); margin-bottom:16px;}
@@ -242,13 +252,6 @@
   /* ---------- SERVICE AREA ---------- */
   .area{padding:64px 0; background:var(--paper-white);}
   .area-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;}
-  .terrain-specialty-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-top:24px;}
-  .terrain-specialty-grid > div{border-left:2px solid var(--blue); padding-left:14px;}
-  .terrain-specialty-grid .eyebrow{display:block; margin-bottom:6px;}
-  .terrain-specialty-grid p{font-size:13.5px; color:var(--slate); line-height:1.5;}
-  @media (max-width:700px){
-    .terrain-specialty-grid{grid-template-columns:1fr;}
-  }
   .area h2{font-size:28px; margin-bottom:14px;}
   .area p{font-size:15px; color:var(--slate-soft); margin-bottom:20px; max-width:48ch;}
   .city-chips{display:flex; flex-wrap:wrap; gap:10px;}
@@ -314,19 +317,19 @@
   @media (max-width:900px){
     .hero-grid, .why-grid, .area-grid{grid-template-columns:1fr;}
     .service-grid, .testi-grid{grid-template-columns:1fr;}
+    .terrain-split{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .why-list{grid-template-columns:1fr;}
     .hero h1{font-size:32px;}
     .logo-block img{height:80px;}
     .header-logo-icon{height:48px !important;}
-    .hero-logo-banner{max-height:110px !important;}
-    .logo-photo-banner{height:340px !important;}
     .nav-phone{display:none;}
   }
   @media (max-width:520px){
     .footer-grid{grid-template-columns:1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .trust-bar{gap:20px;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -336,7 +339,6 @@
 </style>
 </head>
 <body>
-
 <!-- ============ HEADER ============ -->
 <header>
   <div class="header-top wrap" style="padding-left:0;padding-right:0;">
@@ -377,218 +379,122 @@
   </div>
 </header>
 <main>
-
-<!-- ============ LOGO BANNER ============ -->
-<section class="logo-photo-banner" style="position:relative; height:560px; overflow:hidden;">
-  <img src="trex-deck-pergola-denver-banner-v2.webp" alt="Trex composite deck and cedar pergola built by Deck Giant near Denver, CO" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:rotate(-0.4deg) scale(1.015); transform-origin:center;">
-  <div style="position:absolute; inset:0; background:rgba(10,12,15,0.5);"></div>
-  <div style="position:relative; height:100%; display:flex; align-items:center; justify-content:center; padding:0 20px;">
-    <img src="deckgiant-logo-v2.png" alt="Deck Giant — Decks, Pergolas, Carports" class="hero-logo-banner" style="max-height:150px; width:auto; max-width:90%; filter:invert(1); margin:0 auto;">
-  </div>
-</section>
-
 <!-- ============ HERO ============ -->
-<section class="hero">
+<section class="hero" style="padding:56px 0 60px;">
   <div class="wrap hero-grid">
     <div>
-      <h1>Custom <span class="accent">Decks, Pergolas &amp; Carports,</span> Built for Colorado.</h1>
-      <p class="lede">Deck Giant designs and builds custom outdoor structures for customers throughout the entire Denver metro area and Front Range communities, including Littleton, Highlands Ranch, Centennial, Parker, Castle Rock, <a href="deck-builder-evergreen-co.html" style="color:var(--blue); text-decoration:underline;">Evergreen</a>, Morrison, and Golden. From initial contact through final completion of your project, we guarantee the best customer service available anywhere — and we'll treat your project like it's our own.</p>
+      <h1 style="font-size:38px;">Custom Deck Builder in <span class="accent">Evergreen, CO.</span></h1>
+      <p class="lede">Evergreen's steep, rocky mountain lots call for a different kind of deck build than the flatlands — tall support posts, custom footings, and framing engineered to work with the grade instead of fighting it. This is exactly the kind of terrain Deck Giant specializes in.</p>
+      <p style="font-size:17px; color:var(--slate-soft); max-width:52ch; margin-bottom:26px;">We design and build custom decks for homeowners throughout Evergreen, Bergen Park, and the surrounding foothills — composite, cedar, or exotic hardwood, in single-tier or multi-level layouts, standalone or paired with a pergola.</p>
       <div class="hero-ctas">
         <a href="contact.html" class="btn btn-primary">Schedule a Free Consultation</a>
-        <a href="gallery.html" class="btn btn-outline">See Our Work</a>
-      </div>
-      <div class="trust-grid">
-        <div class="trust-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"></rect><rect x="13" y="3" width="8" height="8" rx="1"></rect><rect x="3" y="13" width="8" height="8" rx="1"></rect><rect x="13" y="13" width="8" height="8" rx="1"></rect></svg>
-          <span class="stat">Decks, Pergolas,</span>
-          <span class="label">Carports &amp; Pavilions</span>
-        </div>
-        <div class="trust-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"></path></svg>
-          <span class="stat">100%</span>
-          <span class="label">Customer-Focused Service</span>
-        </div>
-        <div class="trust-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
-          <span class="stat">In-House</span>
-          <span class="label">Design &amp; Rendering</span>
-        </div>
-        <div class="trust-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-          <span class="stat">Free Estimates &amp;</span>
-          <span class="label">On-Site Consultation</span>
-        </div>
-        <div class="trust-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"></path></svg>
-          <span class="stat">Steep-Slope,</span>
-          <span class="label">Difficult Terrain Specialists</span>
-        </div>
-        <div class="trust-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29a2 2 0 0 0 2.82 0l6.58-6.58a2 2 0 0 0 0-2.82L12 2Z"></path><circle cx="7" cy="7" r="1"></circle></svg>
-          <span class="stat">Price Match</span>
-          <span class="label">Policy</span>
-        </div>
+        <a href="upgrades.html" class="btn btn-outline">See Upgrade Options</a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="photo-stack">
-        <div class="photo-slot" style="aspect-ratio:16/11; background:none; padding:0; position:relative;">
-          <img src="morrison-trex-deck-mountain-view.webp" alt="Composite deck built on steep terrain in Morrison, CO by Deck Giant, overlooking the mountains" width="1400" height="1050" loading="eager" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
+        <div class="photo-slot" style="aspect-ratio:1400/1050; background:none; padding:0; position:relative;">
+          <img src="morrison-trex-deck-mountain-view.webp" alt="Trex composite deck built on steep terrain in Morrison, CO by Deck Giant, overlooking the mountains" width="1400" height="1050" loading="eager" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
           <span class="spec-tag tag-1">TREX DECK ON STEEP MOUNTAIN TERRAIN</span>
         </div>
-        <div class="photo-slot" style="aspect-ratio:16/11; background:none; padding:0; position:relative;">
-          <img src="two-tone-pergola-privacy-wall.webp" alt="Two-tone pergola with cedar privacy wall built by Deck Giant" width="1200" height="739" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
-          <span class="spec-tag tag-2">TWO-TONE PERGOLA WITH PRIVACY</span>
+        <div class="photo-slot" style="aspect-ratio:1200/692; background:none; padding:0; position:relative;">
+          <img src="wraparound-pine-deck-evergreen.webp" alt="Wrap-around pine deck built by Deck Giant in Evergreen, CO" width="1200" height="692" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
+          <span class="spec-tag tag-2">WRAP-AROUND DECK IN EVERGREEN, CO</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<div class="section-head" id="services">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow on-dark">What We Build</span>
-      <h2>Four Specialties. One Team.</h2>
-    </div>
-    <p>We limit our specialty to outdoor patio structures so we can be true experts on your project. If you can imagine it, we can likely build it.</p>
-  </div>
-</div>
-
-<section class="services">
-  <div class="wrap service-grid service-grid-4">
-
-    <div class="service-card">
-      <div class="service-photo" style="padding:0;">
-        <img src="deck-with-elevated-stairs.webp" alt="Elevated deck with staircase built by Deck Giant" width="900" height="620" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <div class="service-body">
-        <span class="service-num">01 / DECKS</span>
-        <h3 style="font-size:19px;">Custom Decks</h3>
-        <p style="font-size:13.5px; margin-bottom:14px;">Composite, cedar, exotic hardwood, and pressure-treated decks built for Front Range weather.</p>
-        <a href="decks.html" class="service-link">View Decks →</a>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-photo" style="padding:0;">
-        <img src="black-frame-pergola-pool-privacy.webp" alt="Modern black-frame pergola with cedar privacy wall by a pool, built by Deck Giant" width="900" height="1016" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <div class="service-body">
-        <span class="service-num">02 / PERGOLAS</span>
-        <h3 style="font-size:19px;">Custom Pergolas</h3>
-        <p style="font-size:13.5px; margin-bottom:14px;">Shade structures built for Colorado's climate, designed and customized to meet your exact needs.</p>
-        <a href="pergolas.html" class="service-link">View Pergolas →</a>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-photo" style="padding:0;">
-        <img src="gable-carport-with-suv.webp" alt="Gable-style cedar carport built by Deck Giant" width="900" height="574" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <div class="service-body">
-        <span class="service-num">03 / CARPORTS</span>
-        <h3 style="font-size:19px;">Custom Carports</h3>
-        <p style="font-size:13.5px; margin-bottom:14px;">Any size, attached or detached, flat or gable roof — built to cover your car, truck, or RV.</p>
-        <a href="carports.html" class="service-link">View Carports →</a>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-photo" style="padding:0;">
-        <img src="cedar-pavilion-pool-outdoor-kitchen.webp" alt="Cedar pavilion with outdoor kitchen overlooking a pool, built by Deck Giant" width="900" height="432" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <div class="service-body">
-        <span class="service-num">04 / PAVILIONS</span>
-        <h3 style="font-size:19px;">Custom Pavilions</h3>
-        <p style="font-size:13.5px; margin-bottom:14px;">Standalone covered structures built for outdoor living, year-round.</p>
-        <a href="pavilions.html" class="service-link">View Pavilions →</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============ WHY DECK GIANT ============ -->
-<section class="why">
-  <div class="wrap why-grid">
-    <div>
-      <span class="eyebrow on-dark">Why Deck Giant</span>
-      <h2>Small Team. Locally Owned. Highly Experienced.</h2>
-      <p>Deck Giant is a small, local, dedicated team passionate about our work. We show up on time and follow through on what we say we'll do. We guarantee top-notch customer service from initial contact through final completion on each and every job. <a href="about.html" style="color:#8fc4e8; text-decoration:underline;">Learn more about our team →</a></p>
-    </div>
-    <div class="why-list">
-      <div class="why-item" style="grid-column:1/-1; border-left-color:#8fc4e8;">
-        <h4>Top-Quality Communication, Every Step</h4>
-        <p>You get a real point of contact, a clear project timeline, and updates you don't have to chase — from the first estimate through final walkthrough.</p>
-      </div>
-      <div class="why-item" style="grid-column:1/-1; border-left-color:#8fc4e8;">
-        <h4>You Work Directly With the Owners</h4>
-        <p>When you work with Deck Giant, you're working directly with Gary and Justin, the two owners, throughout your entire project — they're personally involved in every step, start to finish.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SERVICE AREA ============ -->
-<section class="area" id="area">
-  <div class="wrap" style="max-width:760px;">
-    <span class="eyebrow">Where We Build</span>
-    <h2>Serving Denver Metro &amp; the Colorado Front Range</h2>
-    <p>Deck Giant builds decks, pergolas, and carports throughout the entire Denver metro — Littleton, Highlands Ranch, Castle Rock, Centennial, Parker, Lone Tree, Lakewood, Englewood, Denver — and out along the Front Range foothills, including <a href="deck-builder-evergreen-co.html" style="color:var(--blue); text-decoration:underline;">Evergreen</a>, Morrison, Golden, Boulder and all other surrounding communities.</p>
-  </div>
-</section>
-
-<!-- ============ GALLERY TEASER ============ -->
+<!-- ============ TERRAIN ============ -->
 <div class="section-head">
   <div class="wrap">
     <div>
-      <span class="eyebrow on-dark">Our Work</span>
-      <h2>A Few Recent Builds</h2>
+      <span class="eyebrow on-dark">Built for the Terrain</span>
+      <h2>Decks for Evergreen's Steep, Rocky Lots</h2>
     </div>
-    <p>Some of our past projects.</p>
+    <p>Standard deck framing doesn't work on most Evergreen properties — here's how we build for it instead.</p>
   </div>
 </div>
-
-<section class="gallery" id="gallery">
-  <div class="wrap gallery-grid">
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="custom-outdoor-pavilion-pool-fireplace.webp" alt="Large custom outdoor pavilion with stone fireplace by a pool, built by Deck Giant" width="800" height="447" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+<section class="services" style="padding-bottom:24px;">
+  <div class="wrap terrain-split" style="gap:44px; align-items:start;">
+    <div>
+      <p style="font-size:15px; color:var(--slate); margin-bottom:16px;">Most Evergreen lots weren't built with a flat backyard in mind. Between steep grades, exposed granite, and mature trees, a standard deck build often just doesn't hold — and a lot of contractors will quietly steer customers toward a smaller, simpler footprint to avoid the harder engineering work.</p>
+      <p style="font-size:15px; color:var(--slate); margin-bottom:16px;">We do the opposite. Tall support posts, custom footings sized for the actual slope and soil (or rock) conditions, and framing designed to carry the deck's full load off the terrain itself — not around it. On a recent project on similarly steep terrain near Morrison, we anchored custom footers directly into a granite hillside with specialized structural attachments in place of standard concrete footings.</p>
+      <p style="font-size:15px; color:var(--slate);">Snow load matters here too. Evergreen sits well above the metro area in elevation, and framing needs to be sized for the heavier, wetter snow loads the foothills see compared to Denver proper.</p>
     </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="cedar-pergola-deck-white-railing.webp" alt="Cedar pergola built over a deck with white railing by Deck Giant" width="900" height="541" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="morrison-trex-deck-mountain-view.webp" alt="Composite deck built on steep terrain in Morrison, CO by Deck Giant, overlooking the mountains" width="1400" height="1050" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="custom-carport-metal-roof.webp" alt="Custom carport with metal roof built by Deck Giant" width="640" height="400" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="gray-composite-deck-pergola-denver.webp" alt="Gray composite deck with modern pergola built by Deck Giant near Denver, CO" width="800" height="438" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="covered-pavilion-tongue-groove-ceiling.webp" alt="Covered pavilion with tongue-and-groove wood ceiling overlooking a pool, built by Deck Giant" width="800" height="480" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="cedar-deck-stock-tank-pool.webp" alt="Custom cedar deck built around a stock tank pool by Deck Giant" width="900" height="420" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="garapa-deck-cedar-pergola.webp" alt="Garapa hardwood deck with attached cedar pergola built by Deck Giant" width="600" height="800" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div>
+      <div class="photo-slot" style="aspect-ratio:3/4; background:none; padding:0; position:relative;">
+        <img src="narrow-deck-mountain-hillside-colorado.webp" alt="Deck built along a steep hillside home in the Colorado mountains by Deck Giant" width="900" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius); border:1px solid var(--line);">
+      </div>
+      <p class="photo-caption">Deck built along a steep hillside home in the Colorado foothills</p>
     </div>
   </div>
-  <div class="wrap" style="text-align:center; margin-top:32px;">
-    <a href="gallery.html" class="btn btn-outline">See Our Work</a>
+</section>
+<!-- ============ PERMITS ============ -->
+<section style="padding:52px 0; background:var(--charcoal);">
+  <div class="wrap">
+    <span class="eyebrow on-dark">What to Know Before You Build</span>
+    <h2 style="color:#fff; font-size:26px; margin:10px 0 20px;">Deck Permits in Evergreen, CO</h2>
+    <div class="terrain-specialty-grid on-dark" style="gap:28px;">
+      <div>
+        <span class="eyebrow on-dark">County, Not City</span>
+        <p>Evergreen is unincorporated, so deck permits are issued through Jefferson County Planning &amp; Zoning rather than a local town building department. Nearly all new decks, deck expansions, replacements, and even repairs require a permit.</p>
+      </div>
+      <div>
+        <span class="eyebrow on-dark">Wildfire &amp; Snow Load</span>
+        <p>Much of Evergreen sits in the county's Wildland Urban Interface Overlay District, which can affect material choices and clearance requirements. Framing also needs to be engineered for the heavier snow loads the foothills see.</p>
+      </div>
+      <div>
+        <span class="eyebrow on-dark">Geotechnical &amp; Septic</span>
+        <p>Steep or rocky lots can trigger a geotechnical review, and properties on well and septic have setback requirements that affect where a deck can go. We handle this review as part of the design process.</p>
+      </div>
+    </div>
+    <p style="color:#aeb6bd; font-size:13.5px; margin-top:26px; max-width:60ch;">We manage the permit process for our Evergreen customers from start to finish — but permit rules do change, so we always confirm current requirements directly with Jefferson County before finalizing a design.</p>
   </div>
 </section>
 
+<!-- ============ UPGRADES TEASER ============ -->
+<section style="padding:52px 0; background:var(--paper-white); text-align:center;">
+  <div class="wrap" style="max-width:640px;">
+    <span class="eyebrow">Make It Yours</span>
+    <h2 style="font-size:26px; margin:10px 0 14px;">Railing Styles, Stain, Lighting &amp; More</h2>
+    <p style="font-size:14.5px; color:var(--slate); margin-bottom:22px;">See full options and real pricing for deck upgrades on our Upgrades page.</p>
+    <a href="upgrades.html" class="btn btn-primary">View Upgrades &amp; Pricing</a>
+  </div>
+</section>
 
+<!-- ============ GALLERY STRIP ============ -->
+<div class="section-head">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow on-dark">Recent Decks</span>
+      <h2>A Few We've Built</h2>
+    </div>
+    <p>See more in the full gallery.</p>
+  </div>
+</div>
+<section class="gallery">
+  <div class="wrap gallery-grid">
+    <div class="gallery-item wide" style="padding:0; position:relative;">
+      <img src="steep-slope-deck-morrison-co.webp" alt="Second-floor deck built into a granite hillside near Morrison, CO by Deck Giant, with custom footers anchored into the rock" width="1000" height="1334" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="gallery-item" style="padding:0; position:relative;">
+      <img src="cedar-wood-deck-evergreen-co.webp" alt="Custom cedar deck built by Deck Giant in Evergreen, CO" width="1200" height="684" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="gallery-item" style="padding:0; position:relative;">
+      <img src="deck-pergola-cable-railing-mountain-lot.webp" alt="Deck and pergola with cable railing built on a rocky mountain lot by Deck Giant" width="736" height="860" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+  </div>
+  <div class="wrap" style="text-align:center; margin-top:32px;">
+    <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
+  </div>
+</section>
 
 <!-- ============ CTA BANNER ============ -->
-<section class="cta-banner" id="contact">
+<section class="cta-banner">
   <div class="wrap">
-    <h2>Ready to Talk Through Your Project?</h2>
+    <h2>Ready to Design Your Deck?</h2>
     <p>FREE ON-SITE CONSULTATION</p>
     <p style="margin-top:4px;">FREE PRELIMINARY QUOTE VIA EMAIL OR PHONE</p>
     <div class="cta-actions">
