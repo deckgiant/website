@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Deck Giant | Free Consultation</title>
-<meta name="description" content="Get in touch with Deck Giant for a free on-site consultation or preliminary quote on your deck, pergola, carport, or pavilion project — serving the Denver metro and Colorado Front Range.">
+<title>Thank You | Deck Giant</title>
+<meta name="description" content="Thanks for reaching out to Deck Giant — we'll be in touch soon about your deck, pergola, carport, or pavilion project.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,7 +134,6 @@
   }
   .nav-dropdown-inner a:hover{background:rgba(255,255,255,.06); color:#fff;}
   @media (max-width:700px){
-    .contact-grid{grid-template-columns:1fr !important;}
     .nav-details summary{font-size:10.5px;}
     .nav-details summary::after{display:none;}
     .nav-dropdown{
@@ -375,99 +374,25 @@
     </div>
   </div>
 </header>
-<!-- ============ HERO ============ -->
-<section class="hero" style="padding:56px 0 24px;">
-  <div class="wrap" style="max-width:760px;">
-    <h1 style="font-size:38px;">Let's Talk About <span class="accent">Your Project.</span></h1>
-    <p class="lede">Free on-site consultations and free preliminary quotes via email or phone — for every project, large or small.</p>
-  </div>
-</section>
-
-<!-- ============ CONTACT FORM + INFO ============ -->
-<section style="padding:24px 0 64px; background:var(--paper-white);">
-  <div class="wrap contact-grid" style="display:grid; grid-template-columns:1.3fr .7fr; gap:48px; align-items:start;">
-
-    <!-- Form -->
-    <div>
-      <form action="https://formspree.io/f/meeylgjz" method="POST" style="display:grid; gap:18px;">
-        <input type="hidden" name="_subject" value="New inquiry from deckgiant.com contact form">
-        <input type="hidden" name="_next" id="thank-you-redirect" value="thank-you.html">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
-          <div>
-            <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Name</label>
-            <input type="text" name="name" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
-          </div>
-          <div>
-            <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Phone</label>
-            <input type="tel" name="phone" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
-          </div>
-        </div>
-
-        <div>
-          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Email</label>
-          <input type="email" name="email" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
-        </div>
-
-        <div>
-          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Project Type</label>
-          <select name="project_type" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px; background:#fff;">
-            <option value="">Select one</option>
-            <option value="Deck">Deck</option>
-            <option value="Pergola">Pergola</option>
-            <option value="Carport">Carport</option>
-            <option value="Pavilion">Pavilion</option>
-            <option value="Combo Project">Combo Project (two or more structures)</option>
-            <option value="Upgrade / Add-On">Upgrade / Add-On to an Existing Structure</option>
-            <option value="Not Sure Yet">Not Sure Yet</option>
-          </select>
-        </div>
-
-        <div>
-          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Tell Us About Your Project</label>
-          <textarea name="message" rows="6" placeholder="Size, style, timeline, or anything else that's helpful to know." style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px; resize:vertical;"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="justify-self:start; border:none; cursor:pointer;">Send Message</button>
-      </form>
-      <script>
-        document.getElementById('thank-you-redirect').value = window.location.origin + '/thank-you.html';
-      </script>
+<!-- ============ THANK YOU ============ -->
+<section class="hero" style="padding:100px 0;">
+  <div class="wrap" style="max-width:640px; text-align:center;">
+    <span class="eyebrow" style="display:block; justify-content:center;">Message Sent</span>
+    <h1 style="font-size:36px; margin:10px 0 18px;">Thanks — We've Got <span class="accent">Your Message.</span></h1>
+    <p class="lede" style="margin:0 auto 32px;">A member of the Deck Giant team will reach out soon to talk through your project. If it's urgent, feel free to call or text us directly in the meantime.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="tel:+17207721511" class="btn btn-primary">Call 720.772.1511</a>
+      <a href="index.html" class="btn btn-outline">Back to Homepage</a>
     </div>
-
-    <!-- Contact Info -->
-    <div style="background:var(--charcoal); border-radius:var(--radius); padding:32px 28px;">
-      <span class="eyebrow on-dark">Get In Touch</span>
-      <h3 style="color:#fff; font-size:20px; margin:10px 0 20px;">Call, Text, or Email</h3>
-
-      <div style="margin-bottom:20px;">
-        <span style="display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; text-transform:uppercase; color:#8fc4e8; margin-bottom:4px;">Call or Text</span>
-        <a href="tel:+17207721511" style="color:#fff; font-size:19px; font-family:var(--display); text-decoration:none;">720.772.1511</a>
-      </div>
-
-      <div style="margin-bottom:20px;">
-        <span style="display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; text-transform:uppercase; color:#8fc4e8; margin-bottom:4px;">Email</span>
-        <a href="mailto:info@deckgiant.com" style="color:#fff; font-size:15px; text-decoration:none;">info@deckgiant.com</a>
-      </div>
-
-      <div style="margin-bottom:24px;">
-        <span style="display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; text-transform:uppercase; color:#8fc4e8; margin-bottom:4px;">Service Area</span>
-        <p style="color:#aeb6bd; font-size:14px; line-height:1.6;">Denver metro and the Colorado Front Range, including Littleton, Highlands Ranch, Centennial, Parker, Castle Rock, Evergreen, Morrison, and Golden.</p>
-      </div>
-
-      <div style="border-top:1px solid var(--line-dark); padding-top:20px;">
-        <p style="color:#aeb6bd; font-size:13.5px; line-height:1.6;">Free on-site consultations and free preliminary quotes via email or phone — for every project, large or small.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- ============ QUICK LINKS ============ -->
-<section style="padding:40px 0 56px; background:var(--paper); text-align:center;">
+<section style="padding:0 0 72px; background:var(--paper-white); text-align:center;">
   <div class="wrap" style="max-width:640px;">
-    <p style="font-size:14.5px; color:var(--slate); margin-bottom:12px;">Have a quick question instead of a full project inquiry?</p>
-    <a href="faq.html" style="color:var(--blue); text-decoration:underline; font-size:14.5px; margin-right:24px;">Check our FAQ →</a>
-    <a href="pricing.html" style="color:var(--blue); text-decoration:underline; font-size:14.5px;">See Pricing →</a>
+    <p style="font-size:14.5px; color:var(--slate); margin-bottom:12px;">While you wait, take a look at some of our work.</p>
+    <a href="gallery.html" style="color:var(--blue); text-decoration:underline; font-size:14.5px; margin-right:24px;">See Our Work →</a>
+    <a href="faq.html" style="color:var(--blue); text-decoration:underline; font-size:14.5px;">Read Our FAQ →</a>
   </div>
 </section>
 
