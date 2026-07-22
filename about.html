@@ -6,7 +6,7 @@
 <title>About Deck Giant | Denver Metro & Colorado Front Range Deck Builders</title>
 <meta name="description" content="Meet the owners of Deck Giant — Gary Tussey and Justin Fitzpatrick — a Colorado-based deck, pergola, carport, and pavilion builder serving Denver metro and the Front Range.">
 <link rel="canonical" href="https://thedeckgiant.com/about.html">
-<link rel="icon" type="image/png" href="dg-icon-logo.png">
+<link rel="icon" type="image/png" href="dg-favicon-square.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -208,7 +208,7 @@
     border-bottom:3px solid var(--blue); overflow:hidden;
   }
   .service-body{padding:26px;}
-  .service-num{font-family:var(--mono); font-size:11px; color:var(--cedar); letter-spacing:.08em; margin-bottom:10px; display:block;}
+  .service-num{font-family:var(--mono); font-size:13.5px; color:var(--blue); letter-spacing:.08em; margin-bottom:10px; display:block; font-weight:600;}
   .service-card h3{font-size:21px; margin-bottom:10px;}
   .service-card p{font-size:14.5px; color:var(--slate-soft); margin-bottom:16px;}
   .service-list{margin-bottom:20px;}
@@ -278,12 +278,17 @@
   /* ---------- FOOTER ---------- */
   footer{background:var(--ink); color:#9aa4ad; padding:52px 0 24px;}
   .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--line-dark);}
-  footer img{height:72px; width:auto; filter:invert(1); margin-bottom:14px;}
+  footer img{width:100%; max-width:300px; height:auto; filter:invert(1); margin-bottom:14px;}
   .footer-grid p{font-size:13px; line-height:1.7; max-width:32ch;}
   .footer-col h5{font-family:var(--mono); font-size:11.5px; color:#fff; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
   .footer-col a{display:block; font-size:13.5px; margin-bottom:10px; color:#9aa4ad;}
   .footer-col a:hover{color:#fff;}
   .footer-bottom{display:flex; justify-content:space-between; padding-top:22px; font-family:var(--mono); font-size:11.5px; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- TEAM ---------- */
+  .team-grid{display:grid; grid-template-columns:1fr 1fr; gap:32px;}
+  .team-card{display:grid; grid-template-columns:150px 1fr; align-items:start;}
+  .team-card .service-photo{padding:0; aspect-ratio:4/5; border-bottom:none; border-right:3px solid var(--blue);}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:640px){
@@ -294,6 +299,7 @@
   @media (max-width:900px){
     .hero-grid, .why-grid, .area-grid{grid-template-columns:1fr;}
     .service-grid, .testi-grid{grid-template-columns:1fr;}
+    .team-grid{grid-template-columns:1fr; gap:20px;}
     .footer-grid{grid-template-columns:1fr 1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .why-list{grid-template-columns:1fr;}
@@ -306,6 +312,11 @@
     .footer-grid{grid-template-columns:1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .trust-bar{gap:20px;}
+    .team-card{grid-template-columns:1fr;}
+    .team-card .service-photo{
+      border-right:none; border-bottom:3px solid var(--blue);
+      aspect-ratio:4/3; max-width:220px; margin:0 auto;
+    }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -359,36 +370,36 @@
   <div class="wrap" style="max-width:760px;">
     <span class="eyebrow">About Deck Giant</span>
     <h1 style="font-size:38px;">A Business <span class="accent">Built On Extreme Competence.</span></h1>
-    <p class="lede" style="max-width:60ch;">Deck Giant is owned and run by two Colorado-based builders who've spent their careers in construction, design, and project management — not a franchise, not a subcontractor network. When you call, you're talking to one of us.</p>
-    <p class="lede" style="max-width:60ch;">Gary and Justin are longtime friends who realized their skill sets were built to complement each other — hands-on construction experience paired with business and finance know-how. That combination is what lets Deck Giant run as an efficient, well-organized company that never loses sight of what the customer actually needs.</p>
+    <p class="lede" style="max-width:60ch;">Deck Giant is owned and run by two Colorado-based builders who've spent their careers in construction, design, and project management — not a franchise, not a subcontractor network, and not a company that's been bought out by a big national umbrella corporation. When you call, you're talking to one of the two owners.</p>
+    <p class="lede" style="max-width:60ch;">Gary and Justin are longtime friends who realized their skill sets were built to complement each other — hands-on design and construction experience paired with knowledge of business, finance, and experience owning and operating multiple successful construction businesses, with nearly 40 years combined construction experience. That combination is what lets Deck Giant run as an efficient, well-organized company that never loses sight of what the customer actually needs.</p>
   </div>
 </section>
 
 <!-- ============ TEAM ============ -->
 <section class="services" style="padding:20px 0 60px;">
-  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+  <div class="wrap team-grid">
 
-    <div class="service-card" style="display:grid; grid-template-columns:150px 1fr; align-items:start;">
-      <div class="service-photo" style="padding:0; aspect-ratio:4/5; border-bottom:none; border-right:3px solid var(--blue);">
+    <div class="service-card team-card">
+      <div class="service-photo">
         <img src="gary-tussey-headshot.webp" alt="Gary Tussey, Owner and Project Manager at Deck Giant" width="800" height="1000" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
       </div>
       <div class="service-body">
         <span class="service-num">OWNER &amp; PROJECT MANAGER</span>
         <h3 style="font-size:20px;">Gary Tussey</h3>
         <p style="font-size:13.5px; margin-bottom:10px;">A Colorado native with 20+ years of hands-on construction and carpentry experience, Gary also spent a decade in 3D medical, military, transportation, and aerospace animation — including classified defense contract work — after graduating from the Art Institute of Colorado in 1999. He's an Emmy Award-winning animator and director, fluent in AutoCAD, 3ds Max, and Maya.</p>
-        <p style="font-size:13.5px;">That combination of construction know-how and 3D visualization skill means Gary can turn an idea into a detailed drawing or realistic rendering before a single post goes in the ground — helping clients see the space and solve tricky design details early. As Owner and Project Manager, he oversees every project from design through completion.</p>
+        <p style="font-size:13.5px;">That combination of construction know-how and 3D visualization skill means Gary can turn an idea into a detailed drawing or realistic rendering before a single post goes in the ground — helping clients see the space and solve tricky design details early. As Owner and Project Manager, Gary oversees projects from design through completion, bringing the same attention to detail and problem-solving skills that have defined his career. He believes every client is a partner and works to ensure each project balances the homeowner's vision, budget, and needs while delivering exceptional craftsmanship.</p>
       </div>
     </div>
 
-    <div class="service-card" style="display:grid; grid-template-columns:150px 1fr; align-items:start;">
-      <div class="service-photo" style="padding:0; aspect-ratio:4/5; border-bottom:none; border-right:3px solid var(--blue);">
+    <div class="service-card team-card">
+      <div class="service-photo">
         <img src="justin-fitzpatrick-headshot.webp" alt="Justin Fitzpatrick, Owner and Sales Manager at Deck Giant, fly fishing in Colorado" width="750" height="921" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
       </div>
       <div class="service-body">
         <span class="service-num">OWNER &amp; SALES MANAGER</span>
         <h3 style="font-size:20px;">Justin Fitzpatrick</h3>
-        <p style="font-size:13.5px; margin-bottom:10px;">Justin brings 15+ years as a business owner and construction professional. He previously owned and ran a construction company specializing in high-end decks, pergolas, and carports before selling it, and served as head project manager for a real estate firm overseeing multi-million-dollar renovation budgets on multifamily and commercial properties.</p>
-        <p style="font-size:13.5px;">He holds an Associate of Applied Science in Building Construction Technology and Construction Management from Austin Community College. At Deck Giant, Justin runs sales and business operations, working with clients from the first conversation through project planning. Outside of work he's usually with his wife and daughter, or out woodworking, adventure motorcycling, fly fishing, camping, rock climbing, or exploring the outdoors with his dog.</p>
+        <p style="font-size:13.5px; margin-bottom:10px;">Justin brings 15+ years as a business owner and construction/real estate professional. He previously owned and ran a construction company in another state specializing in high-end patio structures before selling it, and served as head project manager for a real estate firm overseeing multi-million-dollar renovation budgets on multifamily and commercial properties.</p>
+        <p style="font-size:13.5px;">He holds an Associate of Applied Science in Building Construction Technology and Construction Management from Austin Community College. At Deck Giant, Justin runs sales and business operations, working with clients from the first conversation through project planning. Outside of work he spends time with his wife and daughter, custom woodworking, adventure motorcycling, fly fishing, camping, rock climbing, and exploring the outdoors with his dog.</p>
       </div>
     </div>
 
@@ -401,20 +412,16 @@
     <div>
       <span class="eyebrow on-dark">Why It Matters</span>
       <h2>Two Owners. Every Project.</h2>
-      <p>Most homeowners don't get to talk to the person actually running their job. With Deck Giant, you do — from the first estimate to final walkthrough.</p>
+      <p>With most construction companies, homeowners don't get to talk to the person actually in charge of their job. With Deck Giant, you do — from the first estimate to final walkthrough.</p>
     </div>
     <div class="why-list">
       <div class="why-item" style="grid-column:1/-1; border-left-color:var(--cedar);">
         <h4>Design Meets Craftsmanship</h4>
-        <p>Gary's construction background and 3D design experience mean projects get planned in real detail before the crew ever shows up — fewer surprises, better outcomes.</p>
+        <p>Gary's construction background and design experience mean projects get planned in detail before the crew ever shows up — fewer surprises, better outcomes.</p>
       </div>
-      <div class="why-item" style="border-left-color:#8fc4e8;">
+      <div class="why-item" style="grid-column:1/-1; border-left-color:#8fc4e8;">
         <h4>Real Project Management</h4>
-        <p>Justin's background managing multi-million-dollar renovation budgets carries over directly into how every Deck Giant project is organized and communicated.</p>
-      </div>
-      <div class="why-item" style="border-left-color:var(--cedar);">
-        <h4>Built on Colorado Terrain</h4>
-        <p>Between them, decades of construction experience across steep lots, mountain properties, and Front Range weather.</p>
+        <p>Justin's background managing large renovation budgets and construction businesses carries over directly into how every Deck Giant project is organized and communicated.</p>
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@
 <title>Project Gallery | Deck Giant</title>
 <meta name="description" content="See custom decks, pergolas, carports, and pavilions built by Deck Giant for homeowners across the Denver metro and Colorado Front Range.">
 <link rel="canonical" href="https://thedeckgiant.com/gallery.html">
-<link rel="icon" type="image/png" href="dg-icon-logo.png">
+<link rel="icon" type="image/png" href="dg-favicon-square.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -261,14 +261,18 @@
 
   /* ---------- GALLERY ---------- */
   .gallery{padding:20px 0 64px; background:var(--paper-white);}
-  .gallery-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
   .gallery-item{
-    aspect-ratio:4/3; background:linear-gradient(135deg,#e2e6e8,#ccd1d4);
+    background:linear-gradient(135deg,#e2e6e8,#ccd1d4);
     display:flex; align-items:center; justify-content:center; padding:10px; text-align:center;
     font-family:var(--mono); font-size:10.5px; color:#818b93; border-radius:var(--radius);
     border:1px solid var(--line); overflow:hidden;
   }
-  .gallery-item.wide{grid-column:span 2;}
+  .gallery-mosaic{column-count:3; column-gap:24px;}
+  .mosaic-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; break-inside:avoid; -webkit-column-break-inside:avoid; page-break-inside:avoid;
+    margin-bottom:24px; display:inline-block; width:100%;
+  }
 
   /* ---------- TESTIMONIALS ---------- */
   .testimonials{background:var(--paper); padding:64px 0;}
@@ -290,7 +294,7 @@
   /* ---------- FOOTER ---------- */
   footer{background:var(--ink); color:#9aa4ad; padding:52px 0 24px;}
   .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--line-dark);}
-  footer img{height:72px; width:auto; filter:invert(1); margin-bottom:14px;}
+  footer img{width:100%; max-width:300px; height:auto; filter:invert(1); margin-bottom:14px;}
   .footer-grid p{font-size:13px; line-height:1.7; max-width:32ch;}
   .footer-col h5{font-family:var(--mono); font-size:11.5px; color:#fff; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
   .footer-col a{display:block; font-size:13.5px; margin-bottom:10px; color:#9aa4ad;}
@@ -307,7 +311,7 @@
     .hero-grid, .why-grid, .area-grid{grid-template-columns:1fr;}
     .service-grid, .testi-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-mosaic{column-count:2;}
     .why-list{grid-template-columns:1fr;}
     .hero h1{font-size:32px;}
     .logo-block img{height:80px;}
@@ -318,7 +322,7 @@
   }
   @media (max-width:520px){
     .footer-grid{grid-template-columns:1fr;}
-    .gallery-grid{grid-template-columns:repeat(2,1fr);}
+    .gallery-mosaic{column-count:1;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -369,8 +373,9 @@
 <!-- ============ HERO ============ -->
 <section class="hero" style="padding:56px 0 40px;">
   <div class="wrap" style="max-width:760px;">
-    <h1 style="font-size:38px;">Our <span class="accent">Work.</span></h1>
-    <p class="lede">A look at real decks, pergolas, carports, and pavilions built by Deck Giant across the Denver metro and the Colorado Front Range.</p>
+    <h1 style="font-size:38px;">See Our <span class="accent">Work.</span></h1>
+    <p class="lede">Recent projects built by the Deck Giant team. Browse the gallery below — if you see something you like, let us know and we'll be happy to put together a free quote for something similar at your home.</p>
+    <p style="font-size:17px; color:var(--slate-soft); max-width:46ch;"><a href="contact.html" style="color:var(--blue); text-decoration:underline;">Contact us</a> for a free preliminary quote via email or phone, or to schedule a free on-site consultation.</p>
   </div>
 </section>
 
@@ -381,57 +386,137 @@
       <span class="eyebrow on-dark">Our Work</span>
       <h2>Decks</h2>
     </div>
-    <p><a href="decks.html" style="color:#8fc4e8;">See our Decks page →</a></p>
+    <p style="font-size:15px;"><a href="decks.html" style="color:#8fc4e8;">See our Decks page →</a></p>
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="deck-pergola-privacy-blind.webp" alt="Custom deck with pergola and cedar privacy wall built by Deck Giant" width="1200" height="684" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+  <div class="wrap gallery-mosaic">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/684;">
+        <img src="deck-pergola-privacy-blind.webp" alt="Custom deck with pergola and cedar privacy wall built by Deck Giant" width="1200" height="684" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Custom deck with an attached pergola and a full cedar privacy wall for extra shade and backyard privacy.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="multi-level-cedar-deck-landscape.webp" alt="Multi-level cedar deck built by Deck Giant" width="1200" height="692" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/692;">
+        <img src="multi-level-cedar-deck-landscape.webp" alt="Multi-level cedar deck built by Deck Giant" width="1200" height="692" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Multi-level cedar deck connecting two elevations in the yard with a built-in step transition between them.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="steep-slope-deck-morrison-co.webp" alt="Second-floor deck built into a granite hillside near Morrison, CO by Deck Giant" width="1000" height="1334" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1000/1334;">
+        <img src="steep-slope-deck-morrison-co.webp" alt="Second-floor deck built into a granite hillside near Morrison, CO by Deck Giant" width="1000" height="1334" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Second-floor deck attached to a granite hillside near Morrison, CO — custom footers anchored directly into solid rock.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="garapa-deck-cedar-pergola-v2.webp" alt="Custom Garapa exotic hardwood deck built by Deck Giant" width="700" height="840" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:700/840;">
+        <img src="garapa-deck-cedar-pergola-v2.webp" alt="Custom Garapa exotic hardwood deck built by Deck Giant" width="700" height="840" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Garapa exotic hardwood deck paired with a cedar pergola, finished with a custom stain to enrich the natural color.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="composite-deck-steps-white-railing.webp" alt="Composite deck with staircase and white metal-baluster railing" width="900" height="1545" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/1545;">
+        <img src="composite-deck-steps-white-railing.webp" alt="Composite deck with staircase and white metal-baluster railing" width="900" height="1545" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Composite deck with a full staircase down to grade and a clean white metal-baluster railing.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="wraparound-pine-deck-evergreen.webp" alt="Wrap-around pine deck built by Deck Giant in Evergreen, CO" width="900" height="900" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/900;">
+        <img src="wraparound-pine-deck-evergreen.webp" alt="Wrap-around pine deck built by Deck Giant in Evergreen, CO" width="900" height="900" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Wrap-around pressure-treated pine deck built on a mountain property in Evergreen, CO.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/446;">
+        <img src="composite-deck-stairs-attached-pergola.webp" alt="Composite deck with an attached pergola and stairs, built by Deck Giant" width="640" height="446" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Composite deck with a dark-stained attached pergola and stairs down to the yard.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:736/860;">
+        <img src="deck-pergola-cable-railing-mountain-lot.webp" alt="Deck and pergola with cable railing built on a rocky mountain lot by Deck Giant" width="736" height="860" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Deck and pergola built on a rocky mountain lot, with cable railing along the edge.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/1200;">
+        <img src="narrow-deck-mountain-hillside-colorado.webp" alt="Narrow deck built along a hillside home in the Colorado mountains by Deck Giant" width="900" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Narrow deck built along a hillside home in the Colorado mountains.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/1200;">
+        <img src="cedar-deck-stairs-cable-railing-view.webp" alt="Cedar deck with stairs and cable railing overlooking the foothills, built by Deck Giant" width="900" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar deck with stairs and cable railing, overlooking the Front Range foothills.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/1200;">
+        <img src="cedar-deck-stairs-construction-detail.webp" alt="Close-up of cedar deck stairs under construction, built by Deck Giant" width="900" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Close-up of cedar deck stairs during construction.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/827;">
+        <img src="elevated-deck-black-baluster-railing-stairs.webp" alt="Elevated deck with black metal baluster railing and stairs, built by Deck Giant" width="1200" height="827" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Elevated deck with black metal baluster railing and a staircase down to the yard.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/559;">
+        <img src="custom-shape-cedar-deck-stock-tank-pool-steps.webp" alt="Custom-shape cedar deck steps built around a stock tank pool by Deck Giant" width="1200" height="559" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Custom-shape cedar deck steps built around a stock tank pool.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/559;">
+        <img src="cedar-deck-stock-tank-pool-overhead.webp" alt="Overhead view of a cedar deck built around a stock tank pool by Deck Giant" width="1200" height="559" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Overhead view of a cedar deck built around a stock tank pool.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/521;">
+        <img src="composite-deck-white-railing-black-balusters.webp" alt="Composite deck with white railing and black balusters, built by Deck Giant" width="1100" height="521" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Composite deck with white railing and black balusters, attached to the home.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/495;">
+        <img src="composite-deck-black-railing-stairs.webp" alt="Composite deck with black metal railing and stairs, built by Deck Giant" width="1100" height="495" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Composite deck with black metal railing and a staircase down to the backyard.</p>
       </div>
     </div>
   </div>
@@ -444,57 +529,265 @@
       <span class="eyebrow on-dark">Our Work</span>
       <h2>Pergolas</h2>
     </div>
-    <p><a href="pergolas.html" style="color:#8fc4e8;">See our Pergolas page →</a></p>
+    <p style="font-size:15px;"><a href="pergolas.html" style="color:#8fc4e8;">See our Pergolas page →</a></p>
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="custom-shape-cedar-pool-pergola-v2.webp" alt="Large custom-shape cedar pergola built by Deck Giant next to a pool" width="1200" height="667" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+  <div class="wrap gallery-mosaic">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/667;">
+        <img src="custom-shape-cedar-pool-pergola-v2.webp" alt="Large custom-shape cedar pergola built by Deck Giant next to a pool" width="1200" height="667" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Large custom-shape cedar pergola built alongside a pool, with a bent roofline that follows the patio layout.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="black-frame-pergola-pool-privacy.webp" alt="Modern black-frame pergola with cedar privacy wall by a pool, built by Deck Giant" width="900" height="1016" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/1016;">
+        <img src="black-frame-pergola-pool-privacy.webp" alt="Modern black-frame pergola with cedar privacy wall by a pool, built by Deck Giant" width="900" height="1016" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Modern black-frame pergola with a cedar privacy wall, built next to a pool.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="freestanding-pergola-red-stain-firepit.webp" alt="Freestanding red-stained pergola with privacy wall and fire pit built by Deck Giant" width="900" height="662" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/662;">
+        <img src="freestanding-pergola-red-stain-firepit.webp" alt="Freestanding red-stained pergola with privacy wall and fire pit built by Deck Giant" width="900" height="662" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Freestanding pergola with a custom red stain, cedar privacy wall, and a stone fire pit below.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="attached-pergola-brick-house.webp" alt="Custom attached pergola built by Deck Giant against a brick house" width="900" height="578" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/578;">
+        <img src="attached-pergola-brick-house.webp" alt="Custom attached pergola built by Deck Giant against a brick house" width="900" height="578" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Cedar pergola attached to a brick home with a bay window tie-in and a clear polycarbonate roof.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="cedar-pergola-unstained-pool.webp" alt="Unstained cedar pergola built by Deck Giant next to a pool" width="900" height="619" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/619;">
+        <img src="cedar-pergola-unstained-pool.webp" alt="Unstained cedar pergola built by Deck Giant next to a pool" width="900" height="619" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Unstained cedar pergola built next to a pool, left natural to weather to a soft silvery grey over time.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="treated-pine-pergola-deck-unstained.webp" alt="Unstained pressure-treated pine pergola and deck built by Deck Giant" width="900" height="675" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/675;">
+        <img src="treated-pine-pergola-deck-unstained.webp" alt="Unstained pressure-treated pine pergola and deck built by Deck Giant" width="900" height="675" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Unfinished treated pine pergola built over a matching deck, ready for the homeowner's choice of stain.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:512/243;">
+        <img src="cedar-pergola-top-slats-4in-spacing.webp" alt="Close-up of 4-inch top slat spacing on a cedar pergola frame, built by Deck Giant" width="512" height="243" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Close-up of 4-inch top slat spacing on a cedar pergola, shown next to the metal roof of an adjoining structure.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/311;">
+        <img src="bronze-polycarbonate-roof-pergola-aerial.webp" alt="Aerial view of a pergola with a bronze polycarbonate roof, built by Deck Giant" width="640" height="311" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Aerial view of a pergola with a bronze polycarbonate roof, letting in filtered light while blocking rain.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/486;">
+        <img src="modern-pergola-privacy-wall-wood-deck.webp" alt="Modern pergola with a slatted privacy wall over a wood deck, built by Deck Giant" width="640" height="486" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern pergola attached to the home with a slatted privacy wall, built over a wood deck.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/392;">
+        <img src="cedar-pergola-privacy-wall-stone-house.webp" alt="Cedar pergola with a privacy wall attached to a stone home, built by Deck Giant" width="640" height="392" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pergola with a slatted privacy wall, attached to a stone home over a deck with metal railing.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/335;">
+        <img src="cedar-privacy-wall-pergola-paver-patio.webp" alt="Cedar pergola with a privacy wall over a paver patio, built by Deck Giant" width="640" height="335" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pergola with a stained privacy wall built over a paver patio.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/427;">
+        <img src="modern-gray-pergola-trex-deck.webp" alt="Modern gray pergola attached over a Trex composite deck, built by Deck Giant" width="640" height="427" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern gray pergola attached to the home over a Trex composite deck.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/364;">
+        <img src="cedar-pergola-decorative-screen-deck-stairs.webp" alt="Cedar pergola with a decorative privacy screen over a deck with stairs, built by Deck Giant" width="640" height="364" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pergola with a decorative privacy screen, built over a deck with metal railing and stairs.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/568;">
+        <img src="cedar-pergola-attached-concrete-patio.webp" alt="Cedar pergola attached to a home over a concrete patio, built by Deck Giant" width="1200" height="568" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pergola attached to the home over a concrete patio.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/568;">
+        <img src="cedar-pergola-lattice-ceiling-concrete-patio.webp" alt="Cedar pergola with a lattice-style top over a concrete patio, built by Deck Giant" width="1200" height="568" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Same cedar pergola, showing the lattice-style top slat pattern from underneath.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:800/389;">
+        <img src="large-curved-cedar-pergola-pool-area.webp" alt="Large curved cedar pergola at a community pool area, built by Deck Giant" width="800" height="389" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Large custom-shape cedar pergola with a curved roofline, built over a community pool lounge area.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:435/640;">
+        <img src="custom-shape-pergola-stone-entryway.webp" alt="Custom-shape stained cedar pergola over a stone home entryway, built by Deck Giant" width="435" height="640" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Custom-shape stained cedar pergola built over a stone home's front entryway.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/844;">
+        <img src="polycarbonate-lattice-roof-pergola-detail.webp" alt="Cedar pergola with a lattice-style polycarbonate roof, built by Deck Giant" width="900" height="844" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Cedar pergola with a lattice-style polycarbonate roof, shown from outside and underneath.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/672;">
+        <img src="modern-pergola-composite-deck-cream-house.webp" alt="Modern attached pergola with a polycarbonate roof over a composite deck, built by Deck Giant" width="1200" height="672" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern attached pergola with a polycarbonate roof over a composite deck.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/656;">
+        <img src="black-frame-pergola-privacy-wall-composite-deck-pool.webp" alt="Modern black-frame pergola with a cedar privacy wall over a composite deck by a pool, built by Deck Giant" width="1200" height="656" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern black-frame pergola with a cedar privacy wall over a composite deck, next to the pool.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/554;">
+        <img src="modern-black-frame-pergola-privacy-wall-gravel-patio.webp" alt="Modern black-frame pergola with a cedar privacy wall over a gravel patio, built by Deck Giant" width="900" height="554" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern black-frame pergola with a cedar privacy wall over a gravel patio seating area.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1200/568;">
+        <img src="attached-cedar-pergola-privacy-wall-modern-house.webp" alt="Attached cedar pergola with a privacy wall at a modern home, built by Deck Giant" width="1200" height="568" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Attached cedar pergola with a privacy wall over a composite deck at a modern home.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/904;">
+        <img src="curved-radius-cedar-pergola-stone-patio.webp" alt="Curved radius-shape cedar pergola over a stone patio, built by Deck Giant" width="1100" height="904" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Curved, radius-shape cedar pergola built over a stone patio.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/495;">
+        <img src="modern-black-frame-pergola-aerial-hillside.webp" alt="Aerial view of a modern black-frame pergola on a hillside lot, built by Deck Giant" width="1100" height="495" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Aerial view of a modern black-frame pergola with 2" top slat spacing, built on a hillside lot.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/513;">
+        <img src="large-cedar-pergola-polycarbonate-lattice-roof.webp" alt="Large cedar pergola with a polycarbonate lattice roof, built by Deck Giant" width="1100" height="513" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Large cedar pergola with a lattice-pattern polycarbonate roof, attached to a brick home.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/513;">
+        <img src="cedar-pergola-polycarbonate-lattice-roof-underside.webp" alt="Underside view of a cedar pergola's polycarbonate lattice roof, built by Deck Giant" width="1100" height="513" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Underside view of the same lattice-pattern polycarbonate roof.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/513;">
+        <img src="modern-pergola-privacy-wall-turf-patio.webp" alt="Modern pergola with a privacy wall over a turf patio, built by Deck Giant" width="1100" height="513" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern pergola with a privacy wall, built over a turf patio seating area.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/1032;">
+        <img src="custom-radius-pergola-aerial-and-finished-view.webp" alt="Curved radius-shape cedar pergola by a pool, aerial framing view and finished view, built by Deck Giant" width="1100" height="1032" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Curved radius-shape cedar pergola by a pool — aerial view of the curved framing during construction, and the finished structure.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/513;">
+        <img src="multi-level-red-stained-pergola-stucco-home.webp" alt="Large multi-level red-stained pergola attached to a stucco home, built by Deck Giant" width="1100" height="513" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Large multi-level pergola with a red stain, attached to a stucco home.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/615;">
+        <img src="two-tone-cedar-pergola-privacy-corner-wall.webp" alt="Two-tone stained pergola with a corner privacy wall, built by Deck Giant" width="1100" height="615" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Two-tone stained pergola with a corner privacy wall, overlooking the backyard.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/434;">
+        <img src="dark-stained-polycarbonate-pergola-brick-patio.webp" alt="Dark-stained pergola with a lattice polycarbonate roof over a brick patio, built by Deck Giant" width="640" height="434" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Dark-stained pergola with a lattice-pattern polycarbonate roof over a brick patio.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1000/466;">
+        <img src="stained-black-frame-lattice-pergola-attached-house.webp" alt="Stained black-frame lattice pergola attached to a home, built by Deck Giant" width="1000" height="466" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Stained black-frame pergola with a lattice-pattern top, attached to the home.</p>
       </div>
     </div>
   </div>
@@ -507,33 +800,65 @@
       <span class="eyebrow on-dark">Our Work</span>
       <h2>Carports</h2>
     </div>
-    <p><a href="carports.html" style="color:#8fc4e8;">See our Carports page →</a></p>
+    <p style="font-size:15px;"><a href="carports.html" style="color:#8fc4e8;">See our Carports page →</a></p>
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="gable-carport-with-suv.webp" alt="Gable-style cedar carport built by Deck Giant" width="900" height="574" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+  <div class="wrap gallery-mosaic">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/574;">
+        <img src="gable-carport-with-suv.webp" alt="Gable-style cedar carport built by Deck Giant" width="900" height="574" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Gable-roof cedar carport, sized to comfortably cover a full-size SUV.</p>
       </div>
     </div>
-    <div class="service-card">
+    <div class="mosaic-card">
       <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/814;">
-        <img src="attached-carport-storage-enclosure.webp" alt="Attached carport with cedar storage enclosure built by Deck Giant" width="900" height="814" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+        <img src="attached-carport-storage-enclosure.webp" alt="Attached carport with cedar storage enclosure built by Deck Giant" width="900" height="814" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Attached carport with a built-in cedar storage enclosure along one side.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="custom-carport-metal-roof.webp" alt="Detached carport with metal roof built by Deck Giant" width="640" height="400" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/400;">
+        <img src="custom-carport-metal-roof.webp" alt="Detached carport with metal roof built by Deck Giant" width="640" height="400" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Detached carport with a metal roof, built beside the driveway.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/303;">
+        <img src="galvalume-metal-roof-carport-aerial.webp" alt="Aerial view of a galvalume metal roof carport, built by Deck Giant" width="640" height="303" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Aerial view of a flat galvalume metal roof carport.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/354;">
+        <img src="green-metal-roof-gable-carport.webp" alt="Green metal gable roof carport, built by Deck Giant" width="640" height="354" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Gable-style carport with a green metal roof, viewed from above.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1100/667;">
+        <img src="modern-attached-carport-cedar-slat-wall.webp" alt="Modern attached carport with a cedar slat privacy wall, built by Deck Giant" width="1100" height="667" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Modern attached carport with a cedar slat side wall and black metal trim.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:1000/1217;">
+        <img src="freestanding-one-car-gable-carport-yellow-house.webp" alt="Freestanding one-car gable carport with a cedar ceiling, built by Deck Giant" width="1000" height="1217" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Freestanding one-car-wide gable carport with a finished cedar ceiling.</p>
       </div>
     </div>
   </div>
@@ -546,33 +871,57 @@
       <span class="eyebrow on-dark">Our Work</span>
       <h2>Pavilions</h2>
     </div>
-    <p><a href="pavilions.html" style="color:#8fc4e8;">See our Pavilions page →</a></p>
+    <p style="font-size:15px;"><a href="pavilions.html" style="color:#8fc4e8;">See our Pavilions page →</a></p>
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid" style="grid-template-columns:repeat(3,1fr);">
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="cedar-pavilion-pool-outdoor-kitchen.webp" alt="Cedar pavilion with outdoor kitchen overlooking a pool, built by Deck Giant" width="900" height="432" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+  <div class="wrap gallery-mosaic">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/432;">
+        <img src="cedar-pavilion-pool-outdoor-kitchen.webp" alt="Cedar pavilion with outdoor kitchen overlooking a pool, built by Deck Giant" width="900" height="432" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Cedar pavilion with a full outdoor kitchen, overlooking an infinity pool.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="custom-outdoor-pavilion-pool-fireplace.webp" alt="Large custom outdoor pavilion with stone fireplace built by Deck Giant" width="800" height="447" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:800/447;">
+        <img src="custom-outdoor-pavilion-pool-fireplace.webp" alt="Large custom outdoor pavilion with stone fireplace built by Deck Giant" width="800" height="447" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Large outdoor pavilion with a stone fireplace surround, set beside the pool.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="gallery-item" style="padding:0; border-radius:0; border:none;">
-        <img src="covered-pavilion-tongue-groove-ceiling.webp" alt="Gable roof pavilion with tongue and groove ceiling built by Deck Giant" width="800" height="480" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:800/480;">
+        <img src="covered-pavilion-tongue-groove-ceiling.webp" alt="Gable roof pavilion with tongue and groove ceiling built by Deck Giant" width="800" height="480" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
       </div>
       <div class="service-body" style="padding:16px 18px;">
         <p style="font-size:13.5px; color:var(--slate);">Gable-roof pavilion with a finished tongue-and-groove ceiling and recessed lighting.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/344;">
+        <img src="freestanding-pavilion-pine-tongue-groove.webp" alt="Freestanding pavilion with a pine tongue-and-groove ceiling, built by Deck Giant" width="640" height="344" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Freestanding pavilion with a finished pine tongue-and-groove ceiling, built at a multifamily property.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:640/480;">
+        <img src="attached-gable-pavilion-stone-house-patio.webp" alt="Attached gable-roof pavilion over a concrete patio at a stone home, built by Deck Giant" width="640" height="480" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Attached gable-roof pavilion over a concrete patio at a stone home.</p>
+      </div>
+    </div>
+    <div class="mosaic-card">
+      <div class="gallery-item" style="padding:0; border-radius:0; border:none; aspect-ratio:900/981;">
+        <img src="pavilion-gable-roof-truss-construction-detail.webp" alt="Close-up of a gable pavilion roof truss under construction, built by Deck Giant" width="900" height="981" loading="lazy" style="width:100%; height:100%; object-fit:contain;">
+      </div>
+      <div class="service-body" style="padding:16px 18px;">
+        <p style="font-size:13.5px; color:var(--slate);">Close-up of a gable pavilion's roof truss and steel connector plates during construction.</p>
       </div>
     </div>
   </div>

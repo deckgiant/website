@@ -6,7 +6,7 @@
 <title>Custom Pergolas in Denver Metro & Colorado Front Range | Deck Giant</title>
 <meta name="description" content="Deck Giant builds custom pergolas — modern or traditional style, cedar or treated pine, attached or freestanding — for homeowners in Littleton, Highlands Ranch, Evergreen, Golden, and Morrison, CO.">
 <link rel="canonical" href="https://thedeckgiant.com/pergolas.html">
-<link rel="icon" type="image/png" href="dg-icon-logo.png">
+<link rel="icon" type="image/png" href="dg-favicon-square.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -193,6 +193,7 @@
   /* ---------- SERVICES ---------- */
   .services{padding:64px 0 20px; background:var(--paper-white);}
   .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .mobile-grid-2{display:grid; grid-template-columns:repeat(2,1fr);}
   .service-grid-4{grid-template-columns:repeat(4,1fr);}
   @media (max-width:1000px){
     .service-grid-4{grid-template-columns:repeat(2,1fr);}
@@ -283,7 +284,7 @@
   /* ---------- FOOTER ---------- */
   footer{background:var(--ink); color:#9aa4ad; padding:52px 0 24px;}
   .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid var(--line-dark);}
-  footer img{height:72px; width:auto; filter:invert(1); margin-bottom:14px;}
+  footer img{width:100%; max-width:300px; height:auto; filter:invert(1); margin-bottom:14px;}
   .footer-grid p{font-size:13px; line-height:1.7; max-width:32ch;}
   .footer-col h5{font-family:var(--mono); font-size:11.5px; color:#fff; letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px;}
   .footer-col a{display:block; font-size:13.5px; margin-bottom:10px; color:#9aa4ad;}
@@ -299,6 +300,7 @@
   @media (max-width:900px){
     .hero-grid, .why-grid, .area-grid{grid-template-columns:1fr;}
     .service-grid, .testi-grid{grid-template-columns:1fr;}
+    .mobile-grid-2{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .why-list{grid-template-columns:1fr;}
@@ -397,7 +399,7 @@
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap" style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+  <div class="wrap mobile-grid-2" style="gap:24px;">
     <div class="service-card">
       <div class="service-photo square" style="padding:0;">
         <img src="modern-pergola-cedar-privacy-wall.webp" alt="Modern style pergola with flush beams and rafters built by Deck Giant" width="900" height="554" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
@@ -434,7 +436,7 @@
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid" style="grid-template-columns:1fr 1fr;">
+  <div class="wrap service-grid mobile-grid-2">
     <div class="service-card">
       <div class="service-photo square" style="padding:0;">
         <img src="cedar-pergola-unstained-pool.webp" alt="Unstained cedar pergola built by Deck Giant next to a pool" width="900" height="619" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
@@ -473,7 +475,7 @@
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid" style="grid-template-columns:1fr 1fr;">
+  <div class="wrap service-grid mobile-grid-2">
     <div class="service-card">
       <div class="service-photo square" style="padding:0;">
         <img src="attached-pergola-brick-house.webp" alt="Custom attached pergola built by Deck Giant against a brick house" width="900" height="578" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
