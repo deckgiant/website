@@ -3,9 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Custom Pergolas in Denver Metro & Colorado Front Range | Deck Giant</title>
-<meta name="description" content="Deck Giant builds custom pergolas — modern or traditional style, cedar or treated pine, attached or freestanding — for homeowners in Littleton, Highlands Ranch, Evergreen, Golden, and Morrison, CO.">
-<link rel="canonical" href="https://thedeckgiant.com/pergolas.html">
+<title>Deck &amp; Pergola Builder in Conifer, CO | Mountain Lot Specialists | Deck Giant</title>
+<meta name="description" content="Deck Giant builds custom decks and pergolas in Conifer, CO — engineered for 8,200-foot snow loads, steep rocky lots, and Jefferson County WUI requirements. Free on-site consultation.">
+<link rel="canonical" href="https://thedeckgiant.com/deck-pergola-builder-conifer-co.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Deck &amp; Pergola Builder in Conifer, CO">
+<meta property="og:description" content="Deck Giant builds custom decks and pergolas in Conifer, CO — engineered for 8,200-foot snow loads, steep rocky lots, and Jefferson County WUI requirements. Free on-site consultation.">
+<meta property="og:url" content="https://thedeckgiant.com/deck-pergola-builder-conifer-co.html">
+<meta property="og:image" content="https://thedeckgiant.com/deck-pergola-cable-railing-mountain-lot.webp">
+<meta property="og:site_name" content="Deck Giant">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deck &amp; Pergola Builder in Conifer, CO">
+<meta name="twitter:description" content="Deck Giant builds custom decks and pergolas in Conifer, CO — engineered for 8,200-foot snow loads, steep rocky lots, and Jefferson County WUI requirements. Free on-site consultation.">
+<meta name="twitter:image" content="https://thedeckgiant.com/deck-pergola-cable-railing-mountain-lot.webp">
 <link rel="icon" type="image/png" href="dg-favicon-square.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +27,8 @@
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "Deck Giant",
-  "description": "Custom deck, pergola, and carport builder serving the Denver metro area and the Colorado Front Range.",
+  "description": "Custom deck builder specializing in steep, rocky mountain lots in Evergreen, CO and the surrounding foothills.",
+  "url": "https://thedeckgiant.com/deck-builder-evergreen-co.html",
   "areaServed": ["Littleton, CO", "Highlands Ranch, CO", "Castle Rock, CO", "Centennial, CO", "Parker, CO", "Lone Tree, CO", "Lakewood, CO", "Englewood, CO", "Denver, CO", "Evergreen, CO", "Morrison, CO", "Golden, CO", "Conifer, CO", "Genesee, CO", "Kittredge, CO", "Idledale, CO", "Indian Hills, CO", "Lookout Mountain, CO", "Boulder, CO", "Colorado Front Range"],
   "address": {
     "@type": "PostalAddress",
@@ -192,10 +203,17 @@
   /* ---------- SERVICES ---------- */
   .services{padding:64px 0 20px; background:var(--paper-white);}
   .service-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  .mobile-grid-2{display:grid; grid-template-columns:repeat(2,1fr);}
+  .terrain-split{display:grid; grid-template-columns:1.1fr .9fr;}
   .service-grid-4{grid-template-columns:repeat(4,1fr);}
+  .compare-grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:900px){
+    .compare-grid-3{grid-template-columns:1fr;}
+  }
   @media (max-width:1000px){
     .service-grid-4{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:640px){
+    .service-grid-2{grid-template-columns:1fr;}
   }
   .service-card{
     background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
@@ -207,9 +225,19 @@
     font-family:var(--mono); font-size:11px; color:#818b93; text-align:center; padding:12px;
     border-bottom:3px solid var(--blue); overflow:hidden;
   }
-  .service-photo.square{aspect-ratio:8/5;}
+  .service-photo.square{aspect-ratio:6/5;}
   .service-body{padding:26px;}
   .photo-caption{font-family:var(--mono); font-size:10px; color:var(--slate-soft); font-style:italic; padding:8px 26px 0;}
+  .terrain-specialty-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
+  .terrain-specialty-grid > div{border-left:2px solid var(--blue); padding-left:14px;}
+  .terrain-specialty-grid.on-dark > div{border-left-color:#8fc4e8;}
+  .terrain-specialty-grid .eyebrow{display:block; margin-bottom:6px;}
+  .terrain-specialty-grid p{font-size:13.5px; color:var(--slate); line-height:1.5;}
+  .terrain-specialty-grid.on-dark p{color:#aeb6bd;}
+  @media (max-width:700px){
+    .terrain-specialty-grid{grid-template-columns:1fr;}
+  }
+  .service-grid-2{grid-template-columns:repeat(2,1fr);}
   .service-num{font-family:var(--mono); font-size:13.5px; color:var(--blue); letter-spacing:.08em; margin-bottom:10px; display:block; font-weight:600;}
   .service-card h3{font-size:21px; margin-bottom:10px;}
   .service-card p{font-size:14.5px; color:var(--slate-soft); margin-bottom:16px;}
@@ -299,7 +327,7 @@
   @media (max-width:900px){
     .hero-grid, .why-grid, .area-grid{grid-template-columns:1fr;}
     .service-grid, .testi-grid{grid-template-columns:1fr;}
-    .mobile-grid-2{grid-template-columns:1fr;}
+    .terrain-split{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .why-list{grid-template-columns:1fr;}
@@ -365,139 +393,90 @@
 <section class="hero" style="padding:56px 0 60px;">
   <div class="wrap hero-grid">
     <div>
-      <h1 style="font-size:38px;">Custom Pergolas, <span class="accent">Built for Colorado.</span></h1>
-      <p class="lede">The Deck Giant team designs and builds custom pergolas throughout the south Denver metro and the foothill communities of Evergreen, <a href="deck-pergola-builder-conifer-co.html" style="color:var(--blue); text-decoration:underline;">Conifer</a>, Morrison, and Golden — attached or freestanding, cedar or treated pine, traditional or modern style, covered or uncovered.</p>
-      <p style="font-size:17px; color:var(--slate-soft); max-width:52ch; margin-bottom:26px;">Pergolas are one of Deck Giant's main specialties — not just an afterthought bolted onto a deck build. Our team has built hundreds of pergolas of all shapes and sizes, so whatever your vision, we can bring it to life. Whether you want a shaded spot over an existing patio or a freestanding structure that anchors your whole backyard, we design and build each pergola around your specific needs.</p>
+      <h1 style="font-size:38px;">Deck &amp; Pergola Builder in <span class="accent">Conifer, CO.</span></h1>
+      <p class="lede">At 8,277 feet, Conifer builds are held to a different standard than anything down in the metro &mdash; heavier snow loads, steep and rocky ground, and wildfire clearance rules that shape the design. Deck Giant builds for exactly these conditions.</p>
+      <p style="font-size:17px; color:var(--slate-soft); max-width:52ch; margin-bottom:26px;">We design and build custom decks and pergolas for homeowners throughout Conifer, Aspen Park, Pine Junction, and the Highway 285 corridor &mdash; composite, cedar, or exotic hardwood, single-tier or multi-level, open pergolas or fully roofed structures.</p>
       <div class="hero-ctas">
         <a href="contact.html" class="btn btn-primary">Schedule a Free Consultation</a>
-        <a href="upgrades.html" class="btn btn-outline">See Upgrade Options</a>
+        <a href="pricing.html" class="btn btn-outline">See Pricing</a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="photo-stack">
-        <div class="photo-slot" style="aspect-ratio:1400/786; background:none; padding:0; position:relative;">
-          <img src="pergola-deck-combo-littleton-co.webp" alt="Custom cedar pergola built over a deck in Colorado" width="1400" height="786" loading="eager" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
-          <span class="spec-tag tag-1">TRADITIONAL STYLE — CEDAR</span>
-        </div>
-        <div class="photo-slot" style="aspect-ratio:1200/667; background:none; padding:0; position:relative;">
-          <img src="custom-shape-cedar-pool-pergola-v2.webp" alt="Large custom-shape modern cedar pergola alongside a pool with a bent roofline following the patio" width="1200" height="667" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
-          <span class="spec-tag tag-2">CUSTOM SHAPE CEDAR PERGOLA</span>
+        <div class="photo-slot" style="aspect-ratio:736/860; background:none; padding:0; position:relative;">
+          <img src="deck-pergola-cable-railing-mountain-lot.webp" alt="Pine deck and cedar pergola on a rocky mountain lot, stained to match, with cable railing and steps" width="736" height="860" loading="eager" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius);">
+          <span class="spec-tag tag-1">DECK &amp; PERGOLA ON A ROCKY MOUNTAIN LOT</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ STYLE COMPARISON ============ -->
+<!-- ============ TERRAIN ============ -->
 <div class="section-head">
   <div class="wrap">
     <div>
-      <span class="eyebrow on-dark">Choose a Style</span>
-      <h2>Modern or Traditional</h2>
+      <span class="eyebrow on-dark">Built for the Elevation</span>
+      <h2>Why Building in Conifer Is Different</h2>
     </div>
-    <p>The two styles look different and support different upgrade options.</p>
+    <p>Conifer sits roughly 3,000 feet above Denver &mdash; and the framing has to reflect that.</p>
   </div>
 </div>
 <section class="services" style="padding-bottom:24px;">
-  <div class="wrap mobile-grid-2" style="gap:24px;">
-    <div class="service-card">
-      <div class="service-photo square" style="padding:0;">
-        <img src="modern-pergola-cedar-privacy-wall.webp" alt="Modern style pergola with flush beams and rafters" width="900" height="554" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <p class="photo-caption">Two-tone stained, modern-style cedar pergola with privacy wall</p>
-      <div class="service-body">
-        <span class="service-num">MODERN STYLE</span>
-        <h3>Clean, Square Look</h3>
-        <p>Beams and rafters sit flush with each other with no overhang, giving a squared-off, minimal look. Modern is the only style that can take a tongue-and-groove ceiling for a fully finished underside, and it can be built with or without a roof.</p>
-      </div>
+  <div class="wrap terrain-split" style="gap:44px; align-items:start;">
+    <div>
+      <p style="font-size:15px; color:var(--slate); margin-bottom:16px;">Conifer sits at about 8,277 feet, roughly a thousand feet higher than Evergreen and some three thousand feet above Denver. That elevation is the single biggest thing separating a Conifer build from a metro one. Snow arrives heavier and wetter and it sits longer, so joist spacing, beam sizing, and post capacity all have to be sized for those loads rather than a flatland spec. It matters most on anything with a roof &mdash; a pavilion or covered pergola carries snow that an open structure simply sheds.</p>
+      <p style="font-size:15px; color:var(--slate); margin-bottom:16px;">Then there is the ground. Lots along the 285 corridor tend to be large, steeply pitched, and heavily treed, often with granite close to the surface or breaking through it. Standard concrete footings assume you can dig to depth; on rock there is nothing to dig. On a recent project on similar terrain near Morrison, we anchored custom footers directly into a granite hillside using specialized structural attachments in place of poured footings. Built properly, rock is an excellent foundation &mdash; it will not settle or heave through a freeze-thaw cycle the way soil does.</p>
+      <p style="font-size:15px; color:var(--slate);">The build season is shorter up here too. Ground conditions and weather close the window earlier than they do in the metro, so Conifer projects are worth starting the conversation on well before you want to be using the space.</p>
     </div>
-    <div class="service-card">
-      <div class="service-photo square" style="padding:0;">
-        <img src="cedar-pergola-deck-white-railing.webp" alt="Traditional style pergola with overhanging rafter tails" width="900" height="541" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div>
+      <div class="photo-slot" style="aspect-ratio:3/4; background:none; padding:0; position:relative;">
+        <img src="narrow-deck-mountain-hillside-colorado.webp" alt="Narrow deck built along a hillside home in the Colorado mountains" width="900" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius); border:1px solid var(--line);">
       </div>
-      <p class="photo-caption">Traditional-style cedar pergola with privacy wall, metal/wood railing, and under-deck storage access</p>
-      <div class="service-body">
-        <span class="service-num">TRADITIONAL STYLE</span>
-        <h3>Overhanging Rafter Tails</h3>
-        <p>Rafters extend past the beam for a classic, layered profile. This style works great with a roof because of the additional overhang and larger coverage area, though it can't support a tongue-and-groove ceiling.</p>
-      </div>
+      <p class="photo-caption">Deck built along a steep hillside home in the Colorado foothills</p>
     </div>
   </div>
 </section>
 
-<!-- ============ MATERIALS ============ -->
-<div class="section-head">
-  <div class="wrap">
+<!-- ============ PERGOLAS ============ -->
+<section class="services" style="padding:8px 0 52px;">
+  <div class="wrap terrain-split" style="gap:44px; align-items:start;">
     <div>
-      <span class="eyebrow on-dark">Choose a Material</span>
-      <h2>Cedar or Pressure-Treated Pine</h2>
+      <span class="eyebrow">Shade &amp; Shelter</span>
+      <h2 style="font-size:26px; margin:10px 0 16px;">Pergolas at Elevation</h2>
+      <p style="font-size:15px; color:var(--slate); margin-bottom:16px;">UV exposure climbs with altitude, which is exactly why pergolas earn their keep in Conifer. An open cedar pergola with tighter top-slat spacing knocks down the afternoon sun without closing in the view, and it sheds snow rather than holding it. Cedar starts at $32 per square foot installed, priced on the roof footprint rather than the post layout.</p>
+      <p style="font-size:15px; color:var(--slate); margin-bottom:16px;">If you want the space usable in weather, a polycarbonate or metal roof turns a pergola into genuine shelter &mdash; but that is the point where snow load stops being theoretical and the framing has to be engineered for it. We size those structures for foothills loads, not Denver ones.</p>
+      <p style="font-size:15px; color:var(--slate);">Privacy walls and slatted screens are worth considering on wooded lots too, less for neighbors than for wind. Build a deck and pergola together as one project and we take 10% off the total.</p>
     </div>
-    <p>Both hold up in Colorado — the right choice depends on look, maintenance, and budget.</p>
-  </div>
-</div>
-<section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid mobile-grid-2">
-    <div class="service-card">
-      <div class="service-photo square" style="padding:0;">
-        <img src="cedar-pergola-unstained-pool.webp" alt="Unstained freestanding cedar pergola with a partial privacy and shade wall" width="900" height="619" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <div>
+      <div class="photo-slot" style="aspect-ratio:900/1200; background:none; padding:0; position:relative;">
+        <img src="cedar-deck-stairs-cable-railing-view.webp" alt="Cedar deck with stairs and cable railing, overlooking the Front Range foothills" width="900" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius); border:1px solid var(--line);">
       </div>
-      <p class="photo-caption">Unfinished cedar traditional-style pergola with partial privacy wall</p>
-      <div class="service-body">
-        <span class="service-num">CEDAR</span>
-        <h3 style="font-size:18px;">Naturally Beautiful &amp; Weather Resistant</h3>
-        <p style="font-size:14.5px; color:var(--slate); margin-bottom:10px;"><strong>Pros:</strong> Naturally resists insects, moisture, and rot, and holds up well through Colorado's swings between dry heat and heavy snow. The rough-sawn texture gives a beautiful rustic look, whether left natural or stained — left unstained, it eventually fades to a silvery grey that a lot of homeowners like.</p>
-        <p style="font-size:14.5px; color:var(--slate);"><strong>Cons:</strong> Costs more than pressure-treated pine, and it's a somewhat softer wood. Needs to be resealed or restained every few years to keep a like-new finish.</p>
-      </div>
-    </div>
-    <div class="service-card">
-      <div class="service-photo square" style="padding:0;">
-        <img src="treated-pine-pergola-deck-unstained.webp" alt="Unstained treated pine pergola and deck with a wrap-around step, ready for stain" width="900" height="675" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <p class="photo-caption">Unfinished treated pine traditional pergola with deck and wraparound step</p>
-      <div class="service-body">
-        <span class="service-num">TREATED PINE</span>
-        <h3 style="font-size:18px;">Treated for Maximum Rot Resistance</h3>
-        <p style="font-size:14.5px; color:var(--slate); margin-bottom:10px;"><strong>Pros:</strong> Won't rot and can last for decades, even with direct ground contact. It's the least expensive lumber option, and it's easy to paint or stain to match any color.</p>
-        <p style="font-size:14.5px; color:var(--slate);"><strong>Cons:</strong> Boards tend to warp and bend somewhat as they dry out over time. This is usually minimal and not a structural or safety issue — more of an aesthetic one. We recommend larger lumber sizes and more top slats for additional connection points to help minimize it.</p>
-      </div>
+      <p class="photo-caption">Cedar deck and stairs with cable railing, overlooking the foothills</p>
     </div>
   </div>
 </section>
 
-<!-- ============ ATTACHED VS FREESTANDING ============ -->
-<div class="section-head">
+<!-- ============ PERMITS ============ -->
+<section style="padding:52px 0; background:var(--charcoal);">
   <div class="wrap">
-    <div>
-      <span class="eyebrow on-dark">Choose Attachment Type</span>
-      <h2>Attached or Freestanding</h2>
-    </div>
-    <p>Both are engineered to hold up — the right choice depends on your layout and how you'll use the space.</p>
-  </div>
-</div>
-<section class="services" style="padding-bottom:24px;">
-  <div class="wrap service-grid mobile-grid-2">
-    <div class="service-card">
-      <div class="service-photo square" style="padding:0;">
-        <img src="attached-pergola-brick-house.webp" alt="Attached cedar pergola with a clear polycarbonate roof over a bay window" width="900" height="578" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+    <span class="eyebrow on-dark">What to Know Before You Build</span>
+    <h2 style="color:#fff; font-size:26px; margin:10px 0 20px;">Deck &amp; Pergola Permits in Conifer, CO</h2>
+    <div class="terrain-specialty-grid on-dark" style="gap:28px;">
+      <div>
+        <span class="eyebrow on-dark">County, Not City</span>
+        <p>Conifer is an unincorporated community, so permits are issued through Jefferson County Planning &amp; Zoning rather than a town building department. Nearly all new decks, expansions, replacements, and even repairs require a permit.</p>
       </div>
-      <p class="photo-caption">Cedar pergola with custom bay window attachment and a clear polycarbonate roof</p>
-      <div class="service-body">
-        <span class="service-num">ATTACHED</span>
-        <h3 style="font-size:18px;">Attached</h3>
-        <p style="font-size:14.5px; color:var(--slate);">Connected to your home on one or more sides, using the house for partial support. A natural extension of an existing deck or patio, with a cleaner look and more usable patio space since there are no rear posts — and it avoids posts against the house that could block windows or doors.</p>
+      <div>
+        <span class="eyebrow on-dark">Wildfire Clearance</span>
+        <p>Conifer is densely forested and much of the area falls in the county's Wildland Urban Interface Overlay District, which can affect material choices and clearance requirements around the structure &mdash; a bigger factor here than lower down the foothills.</p>
+      </div>
+      <div>
+        <span class="eyebrow on-dark">Geotechnical &amp; Septic</span>
+        <p>Steep or rocky lots can trigger a geotechnical review, and the large well-and-septic properties common along the 285 corridor carry setback requirements that affect where a structure can go. We handle this as part of design.</p>
       </div>
     </div>
-    <div class="service-card">
-      <div class="service-photo square" style="padding:0;">
-        <img src="freestanding-pergola-red-stain-firepit.webp" alt="Freestanding cedar pergola with custom red stain and cedar privacy wall" width="900" height="662" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-      </div>
-      <p class="photo-caption">Freestanding pergola with 2" spaced top slats, privacy wall, and custom stain color</p>
-      <div class="service-body">
-        <span class="service-num">FREESTANDING</span>
-        <h3 style="font-size:18px;">Freestanding</h3>
-        <p style="font-size:14.5px; color:var(--slate);">Fully self-supported and placed anywhere in the yard — over a fire pit, a hot tub, or a seating area away from the house. More flexible on placement, with posts and footings engineered to carry the full structure on their own.</p>
-      </div>
-    </div>
+    <p style="color:#aeb6bd; font-size:13.5px; margin-top:26px; max-width:60ch;">We manage the permit process for our Conifer customers from start to finish &mdash; but permit rules do change, so we always confirm current requirements directly with Jefferson County before finalizing a design.</p>
   </div>
 </section>
 
@@ -505,8 +484,8 @@
 <section style="padding:52px 0; background:var(--paper-white); text-align:center;">
   <div class="wrap" style="max-width:640px;">
     <span class="eyebrow">Make It Yours</span>
-    <h2 style="font-size:26px; margin:10px 0 14px;">Roofing, Stain, Privacy Walls &amp; More</h2>
-    <p style="font-size:14.5px; color:var(--slate); margin-bottom:22px;">Polycarbonate or metal roofing, a tongue-and-groove ceiling, a stained finish, or a built-in privacy wall — see full options and real pricing on our Upgrades page.</p>
+    <h2 style="font-size:26px; margin:10px 0 14px;">Railing Styles, Stain, Roofing &amp; More</h2>
+    <p style="font-size:14.5px; color:var(--slate); margin-bottom:22px;">Cable railing for the view, polycarbonate or metal roofing for the weather, stain to match the house. See full options and real pricing on our Upgrades page.</p>
     <a href="upgrades.html" class="btn btn-primary">View Upgrades &amp; Pricing</a>
   </div>
 </section>
@@ -515,7 +494,7 @@
 <div class="section-head">
   <div class="wrap">
     <div>
-      <span class="eyebrow on-dark">Recent Pergolas</span>
+      <span class="eyebrow on-dark">Recent Mountain Builds</span>
       <h2>A Few We've Built</h2>
     </div>
     <p>See more in the full gallery.</p>
@@ -524,24 +503,27 @@
 <section class="gallery">
   <div class="wrap gallery-grid">
     <div class="gallery-item wide" style="padding:0; position:relative;">
-      <img src="pergola-deck-combo-littleton-co.webp" alt="Composite deck with traditional cedar pergola" width="1400" height="786" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      <img src="steep-slope-deck-morrison-co.webp" alt="Second-floor deck built into a granite hillside near Morrison, CO" width="1000" height="1334" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
     </div>
     <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="modern-pergola-cedar-privacy-wall.webp" alt="Modern freestanding pergola with cedar privacy wall" width="900" height="554" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      <img src="wraparound-pine-deck-evergreen.webp" alt="Wrap-around pine deck in Evergreen, CO" width="1200" height="1200" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
     </div>
     <div class="gallery-item" style="padding:0; position:relative;">
-      <img src="garapa-deck-cedar-pergola.webp" alt="Garapa hardwood deck with attached cedar pergola" width="600" height="800" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+      <img src="morrison-trex-deck-mountain-view.webp" alt="Trex composite deck built on steep terrain in Morrison, CO, overlooking the mountains" width="1400" height="1050" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
     </div>
   </div>
   <div class="wrap" style="text-align:center; margin-top:32px;">
     <a href="gallery.html" class="btn btn-outline">View Full Gallery</a>
+  </div>
+  <div class="wrap" style="text-align:center; margin-top:22px;">
+    <p style="font-size:14.5px; color:var(--slate);">Also building in <a href="deck-builder-evergreen-co.html" style="color:var(--blue); text-decoration:underline;">Evergreen</a>, Morrison, Golden, Genesee, Kittredge, Idledale, Indian Hills, and Lookout Mountain. More on mountain construction in our <a href="blog-steep-lot-evergreen-morrison.html" style="color:var(--blue); text-decoration:underline;">steep lot build guide</a>.</p>
   </div>
 </section>
 
 <!-- ============ CTA BANNER ============ -->
 <section class="cta-banner">
   <div class="wrap">
-    <h2>Ready to Design Your Pergola?</h2>
+    <h2>Ready to Design Your Deck or Pergola?</h2>
     <p>FREE ON-SITE CONSULTATION</p>
     <p style="margin-top:4px;">FREE PRELIMINARY QUOTE VIA EMAIL OR PHONE</p>
     <div class="cta-actions">
@@ -550,6 +532,7 @@
     </div>
   </div>
 </section>
+
 
 <!-- ============ FOOTER ============ -->
 </main>
