@@ -191,7 +191,10 @@
   .nav-dropdown{
     display:none; position:absolute; top:100%; left:0; padding-top:10px; min-width:180px; z-index:100;
   }
-  .nav-details:hover .nav-dropdown{display:block;}
+  @media (hover:hover) and (pointer:fine){
+    .nav-details:hover .nav-dropdown{display:block;}
+  }
+  .nav-details[open] .nav-dropdown{display:block;}
   .nav-dropdown-inner{
     background:var(--ink-soft); border:1px solid var(--line-dark); border-top:2px solid var(--blue);
     border-radius:var(--radius); padding:8px 0; box-shadow:0 10px 24px rgba(0,0,0,.25);
@@ -623,7 +626,7 @@
       <img src="pergola-slope-shim-diagram-isometric.webp" alt="Angled view of an alternative shim layout on a pergola, spaced to match the roof panel width" width="864" height="406" loading="lazy" style="width:100%; height:auto; display:block;">
     </div>
     <p style="font-family:var(--mono); font-size:11.5px; color:var(--slate-soft); letter-spacing:.03em; margin:8px 0 0; text-align:center;">A DIFFERENT LAYOUT &mdash; SPACING SET TO MATCH THE PANEL WIDTH</p>
-    <p style="font-family:var(--mono); font-size:10.5px; color:var(--slate-soft); letter-spacing:.03em; margin:14px 0 0; text-align:center;">DIAGRAMS COURTESY OF REGAL PLASTICS</p>
+    <p style="font-family:var(--mono); font-size:10.5px; color:var(--slate-soft); letter-spacing:.03em; margin:14px 0 30px; text-align:center;">DIAGRAMS COURTESY OF REGAL PLASTICS</p>
 
     <p style="font-size:15.5px; color:var(--slate); margin-bottom:18px;"><strong>Lowering the front posts</strong> is the other route, and it is often the one we prefer. We temporarily support the structure, cut the front posts down to the height the slope calls for, and reset the front of the pergola at that height. It is more labor than shimming, but the pergola keeps its original proportions and nothing is added overhead. A 2% fall is slight enough that nobody notices it &mdash; a 12-foot-deep pergola drops about 3 inches at the front across the entire span, which takes a level to see. The pergola looks the same, just fractionally lower.</p>
 
@@ -631,7 +634,7 @@
     <p style="font-size:15.5px; color:var(--slate); margin-bottom:24px;">You can check your own slope in about five minutes. Lay a four-foot level on top of the pergola, raise the low end until the bubble centers, and measure the gap underneath. An inch or more and you are ready as-is. Check it in three or four spots, and measure on top of the structure rather than from the ground, because most patios already slope away from the house and that will give you a false reading.</p>
 
     <h2 style="font-size:24px; margin:34px 0 14px;">What Moves the Price: How the Top Is Framed</h2>
-    <p style="font-size:15.5px; color:var(--slate); margin-bottom:18px;">Polycarbonate panels come in fixed widths and cannot be trimmed down, so whatever they fasten to has to be spaced to match. Pergolas built with closely spaced shade slats usually work as-is. Pergolas with nothing but wide-set structural rafters need top slats or blocking added across the top first.</p>
+    <p style="font-size:15.5px; color:var(--slate); margin-bottom:18px;">The panels need something to fasten to across their span. Pergolas built with closely spaced top slats usually work as-is. Pergolas framed with nothing but wide-set structural rafters need top slats or blocking added across the top first.</p>
     <p style="font-size:15.5px; color:var(--slate); margin-bottom:24px;">That is a small material and labor addition, not a redesign, and it has a side benefit: top slats laid over rafters add stiffness to a structure that has been carrying its own weight for years.</p>
 
     <h2 style="font-size:24px; margin:34px 0 14px;">Why Panel Grade Matters More in Colorado</h2>
