@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Custom Pavilions &amp; Gazebos in Denver, CO | Deck Giant</title>
-<meta name="description" content="Cedar gable-roof pavilions and gazebos with tongue-and-groove ceilings and outdoor kitchens, built across the south Denver metro.">
+<title>Pavilion Builder in Denver, CO | Custom Pavilions &amp; Gazebos | Deck Giant</title>
+<meta name="description" content="Custom pavilion and gazebo builder serving Denver and the foothills. Cedar frame, gable metal roof, from $45/sq ft installed. Free on-site design consultation.">
 <link rel="canonical" href="https://thedeckgiant.com/pavilions.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Custom Pavilions &amp; Gazebos in Denver, CO | Deck Giant">
-<meta property="og:description" content="Cedar gable-roof pavilions and gazebos with tongue-and-groove ceilings and outdoor kitchens, built across the south Denver metro.">
+<meta property="og:title" content="Pavilion Builder in Denver, CO | Custom Pavilions &amp; Gazebos | Deck Giant">
+<meta property="og:description" content="Custom pavilion and gazebo builder serving Denver and the foothills. Cedar frame, gable metal roof, from $45/sq ft installed. Free on-site design consultation.">
 <meta property="og:url" content="https://thedeckgiant.com/pavilions.html">
 <meta property="og:image" content="https://thedeckgiant.com/og-pavilions.jpg">
 <meta property="og:image:width" content="1200">
@@ -16,8 +16,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Deck Giant">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Custom Pavilions &amp; Gazebos in Denver, CO | Deck Giant">
-<meta name="twitter:description" content="Cedar gable-roof pavilions and gazebos with tongue-and-groove ceilings and outdoor kitchens, built across the south Denver metro.">
+<meta name="twitter:title" content="Pavilion Builder in Denver, CO | Custom Pavilions &amp; Gazebos | Deck Giant">
+<meta name="twitter:description" content="Custom pavilion and gazebo builder serving Denver and the foothills. Cedar frame, gable metal roof, from $45/sq ft installed. Free on-site design consultation.">
 <meta name="twitter:image" content="https://thedeckgiant.com/og-pavilions.jpg">
 <link rel="icon" type="image/png" href="dg-favicon-square.png">
 
@@ -367,7 +367,7 @@
     .header-logo-icon{height:48px !important;}
     .hero-logo-banner{max-height:110px !important;}
     .logo-photo-banner{height:340px !important;}
-    .nav-phone{display:none;}
+    
   }
   @media (max-width:520px){
     .footer-grid{grid-template-columns:1fr;}
@@ -378,21 +378,103 @@
     html{scroll-behavior:auto;}
     .btn{transition:none;}
   }
+
+.price-card{border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--paper-white); margin-bottom:22px;}
+.price-card-head{background:var(--ink); color:#fff; padding:18px 22px;}
+.price-card-head h3{color:#fff; font-size:18px; margin:0 0 4px;}
+.price-card-head p{font-family:var(--mono); font-size:11.5px; color:#9aa4ad; margin:0;}
+.price-row{display:flex; justify-content:space-between; align-items:center; gap:16px; padding:16px 22px; border-bottom:1px solid var(--line);}
+.price-row:last-child{border-bottom:none;}
+.price-row .material{font-family:var(--display); font-weight:600; font-size:15.5px; color:var(--ink);}
+.price-row .note{font-family:var(--body); font-size:12.5px; color:var(--slate-soft); margin-top:3px;}
+.price-row .amount{font-family:var(--mono); font-size:14.5px; font-weight:600; color:var(--blue); white-space:nowrap; text-align:right;}
+@media (max-width:520px){
+  .price-row{flex-direction:column; align-items:flex-start; gap:6px;}
+  .price-row .amount{text-align:left;}
+}
+
+/* ===== MOBILE HEADER: tap-to-call + hamburger (added Aug 2026) ===== */
+.nav-toggle{display:none;}
+.nav-toggle-label{display:none;}
+
+@media (max-width:900px){
+  /* phone CTA stays visible and tappable on mobile */
+  .nav-phone{display:block !important; font-size:15px; text-align:left;}
+  .nav-phone .call-label{font-size:9.5px;}
+
+  .header-top{padding:10px 16px; gap:12px; flex-wrap:nowrap;}
+  .header-actions{gap:12px; flex-wrap:nowrap;}
+  .nav-cta{padding:10px 14px; font-size:10.5px;}
+  .header-logo-icon{margin-left:0;}
+
+  /* hamburger button */
+  .nav-toggle-label{
+    display:flex; flex-direction:column; justify-content:center; gap:5px;
+    width:44px; height:44px; padding:10px; cursor:pointer; flex:0 0 auto;
+    margin-left:auto;
+  }
+  .nav-toggle-label span{
+    display:block; height:2px; width:100%; background:#fff; border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle:checked ~ .header-nav .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle:checked ~ .header-nav .nav-toggle-label span:nth-child(2){opacity:0;}
+  .nav-toggle:checked ~ .header-nav .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* nav bar becomes the hamburger row */
+  .header-nav{padding:0;}
+  .header-nav > .wrap{display:flex; flex-direction:column;}
+  .nav-bar-row{display:flex; align-items:center; justify-content:space-between; padding:4px 16px;}
+  .nav-bar-label{
+    font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+    text-transform:uppercase; color:#9aa4ad;
+  }
+
+  /* collapsed by default */
+  .nav-links{
+    display:none; flex-direction:column; align-items:stretch;
+    gap:0; padding:0 0 8px;
+  }
+  .nav-toggle:checked ~ .header-nav .nav-links{display:flex;}
+  .nav-links li{border-top:1px solid var(--line-dark);}
+  .nav-links a, .nav-details summary{
+    display:block; padding:14px 20px; font-size:13px; letter-spacing:.05em;
+  }
+  .nav-details summary{justify-content:space-between; width:100%;}
+  .nav-dropdown{padding:0;}
+  .nav-dropdown-inner a{
+    padding:12px 20px 12px 36px; font-size:12.5px; color:#9aa4ad;
+    border-top:1px solid var(--line-dark);
+  }
+}
+
+@media (max-width:420px){
+  .nav-phone{font-size:14px;}
+  .nav-cta{padding:9px 11px; font-size:9.5px;}
+  .header-logo-icon{height:40px !important;}
+}
 </style>
 </head>
 <body>
 <header>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
   <div class="header-top wrap" style="padding-left:0;padding-right:0;">
     <div class="logo-block">
       <a href="index.html"><img src="dg-icon-logo-v3.webp" alt="Deck Giant logo" class="header-logo-icon" width="400" height="205"></a>
     </div>
     <div class="header-actions">
-      <a href="tel:+17207721511" class="nav-phone"><span class="call-label">Call or Text</span>720.772.1511</a>
+      <a href="tel:+17207721511" class="nav-phone"><span class="call-label">Text or Call</span>720.772.1511</a>
       <a href="contact.html" class="nav-cta">Free Consultation</a>
     </div>
   </div>
   <div class="header-nav">
     <div class="wrap" style="padding:0;">
+      <div class="nav-bar-row">
+        <span class="nav-bar-label">Menu</span>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </label>
+      </div>
       <ul class="nav-links">
         <li><a href="gallery.html">Gallery</a></li>
         <li class="nav-item">
@@ -402,6 +484,7 @@
               <div class="nav-dropdown-inner">
                 <a href="decks.html">Decks</a>
                 <a href="pergolas.html">Pergolas</a>
+                <a href="polycarbonate-pergola-roof-denver.html">Polycarbonate Roofs</a>
                 <a href="carports.html">Carports</a>
                 <a href="pavilions.html">Pavilions</a>
                 <a href="upgrades.html">Upgrades</a>
@@ -424,8 +507,8 @@
 <section class="hero" style="padding:56px 0 60px;">
   <div class="wrap hero-grid">
     <div>
-      <h1 style="font-size:38px;">Custom Pavilions, <span class="accent">Built for Colorado.</span></h1>
-      <p class="lede">Deck Giant designs and builds custom cedar, gable-roof pavilions and gazebos for homeowners throughout the south Denver metro and out into the Colorado foothills — built as a true outdoor room, not just shade.</p>
+      <h1 style="font-size:38px;">Custom Pavilion Builder <span class="accent">in Denver, CO.</span></h1>
+      <p class="lede">Deck Giant designs and builds custom cedar, gable-roof pavilions and gazebos for homeowners throughout Denver, the south metro, and out into the Colorado foothills — built as a true outdoor room, not just shade.</p>
       <p style="font-size:17px; color:var(--slate-soft); max-width:52ch; margin-bottom:26px;">Pavilions are one of Deck Giant's core specialties — a fully roofed, finished structure built for year-round use, not just shade. Whether you want a simple covered sitting area or a full outdoor kitchen and fireplace setup, we design and build it to fit your property and your needs. We thrive in difficult terrain, steep slopes, and complicated projects — no job is too complex.</p>
       <div class="hero-ctas">
         <a href="contact.html" class="btn btn-primary">Schedule a Free Consultation</a>
@@ -480,6 +563,44 @@
         <h3 style="font-size:18px;">Fans, Recessed Lighting &amp; More</h3>
         <p style="font-size:14.5px; color:var(--slate);">A finished ceiling gives us a clean surface to mount a ceiling fan, recessed lighting, or a speaker, with wiring run above the boards instead of hanging exposed. It's available in cedar to match your pavilion, and pairs well with an outdoor kitchen or fireplace setup for year-round use.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ PRICING SNAPSHOT ============ -->
+<section style="padding:54px 0; background:var(--paper);">
+  <div class="wrap" style="max-width:820px;">
+    <span class="eyebrow">Straight Answers</span>
+    <h2 style="font-size:26px; margin:10px 0 14px;">What a Pavilion Costs in Denver</h2>
+    <p style="font-size:15px; color:var(--slate); line-height:1.65; margin-bottom:24px; max-width:62ch;">Most homeowners want a number before they want a consultation, so here is ours up front. This is an installed starting price &mdash; the final figure depends on size, roof span, site access, and the upgrades you choose.</p>
+
+    <div class="price-card">
+      <div class="price-card-head">
+        <h3>Pavilions &amp; Gazebos</h3>
+        <p>STARTING PRICE PER SQ FT &mdash; FULL INSTALL, GABLE-STYLE METAL ROOF</p>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="material">Gable-Style Pavilion</div>
+          <div class="note">Standing-seam or R-panel metal roof, cedar frame</div>
+        </div>
+        <div class="amount">Starting at $45/sq ft</div>
+      </div>
+      <div class="price-row">
+        <div>
+          <div class="material">Pavilion + Deck Combo</div>
+          <div class="note">Build two structures together as one project</div>
+        </div>
+        <div class="amount">Save 10% on the total</div>
+      </div>
+    </div>
+
+    <p style="font-size:14.5px; color:var(--slate); line-height:1.65; margin-bottom:22px; max-width:62ch;">Tongue-and-groove ceilings, ceiling fans, stain, and outdoor kitchen or fireplace surrounds are priced separately &mdash; every add-on is listed on our Upgrades page.</p>
+
+    <div style="display:flex; gap:11px; flex-wrap:wrap;">
+      <a href="pricing.html" class="btn btn-primary">See Full Pricing</a>
+      <a href="contact.html" class="btn btn-outline">Get a Free Quote</a>
     </div>
   </div>
 </section>
@@ -547,6 +668,7 @@
         <h3>Services</h3>
         <a href="decks.html">Decks</a>
         <a href="pergolas.html">Pergolas</a>
+        <a href="polycarbonate-pergola-roof-denver.html">Polycarbonate Roofs</a>
         <a href="carports.html">Carports</a>
         <a href="pavilions.html">Pavilions</a>
         <a href="upgrades.html">Upgrades</a>

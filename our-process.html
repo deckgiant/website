@@ -350,7 +350,7 @@
     .hero h1{font-size:32px;}
     .logo-block img{height:80px;}
     .header-logo-icon{height:48px !important;}
-    .nav-phone{display:none;}
+    
   }
   @media (max-width:520px){
     .footer-grid{grid-template-columns:1fr;}
@@ -380,23 +380,91 @@
   @media (max-width:560px){
     .process-step{grid-template-columns:1fr; gap:8px;}
   }
+
+/* ===== MOBILE HEADER: tap-to-call + hamburger (added Aug 2026) ===== */
+.nav-toggle{display:none;}
+.nav-toggle-label{display:none;}
+
+@media (max-width:900px){
+  /* phone CTA stays visible and tappable on mobile */
+  .nav-phone{display:block !important; font-size:15px; text-align:left;}
+  .nav-phone .call-label{font-size:9.5px;}
+
+  .header-top{padding:10px 16px; gap:12px; flex-wrap:nowrap;}
+  .header-actions{gap:12px; flex-wrap:nowrap;}
+  .nav-cta{padding:10px 14px; font-size:10.5px;}
+  .header-logo-icon{margin-left:0;}
+
+  /* hamburger button */
+  .nav-toggle-label{
+    display:flex; flex-direction:column; justify-content:center; gap:5px;
+    width:44px; height:44px; padding:10px; cursor:pointer; flex:0 0 auto;
+    margin-left:auto;
+  }
+  .nav-toggle-label span{
+    display:block; height:2px; width:100%; background:#fff; border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle:checked ~ .header-nav .nav-toggle-label span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle:checked ~ .header-nav .nav-toggle-label span:nth-child(2){opacity:0;}
+  .nav-toggle:checked ~ .header-nav .nav-toggle-label span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  /* nav bar becomes the hamburger row */
+  .header-nav{padding:0;}
+  .header-nav > .wrap{display:flex; flex-direction:column;}
+  .nav-bar-row{display:flex; align-items:center; justify-content:space-between; padding:4px 16px;}
+  .nav-bar-label{
+    font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+    text-transform:uppercase; color:#9aa4ad;
+  }
+
+  /* collapsed by default */
+  .nav-links{
+    display:none; flex-direction:column; align-items:stretch;
+    gap:0; padding:0 0 8px;
+  }
+  .nav-toggle:checked ~ .header-nav .nav-links{display:flex;}
+  .nav-links li{border-top:1px solid var(--line-dark);}
+  .nav-links a, .nav-details summary{
+    display:block; padding:14px 20px; font-size:13px; letter-spacing:.05em;
+  }
+  .nav-details summary{justify-content:space-between; width:100%;}
+  .nav-dropdown{padding:0;}
+  .nav-dropdown-inner a{
+    padding:12px 20px 12px 36px; font-size:12.5px; color:#9aa4ad;
+    border-top:1px solid var(--line-dark);
+  }
+}
+
+@media (max-width:420px){
+  .nav-phone{font-size:14px;}
+  .nav-cta{padding:9px 11px; font-size:9.5px;}
+  .header-logo-icon{height:40px !important;}
+}
 </style>
 </head>
 <body>
 
 <!-- ============ HEADER ============ -->
 <header>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
   <div class="header-top wrap" style="padding-left:0;padding-right:0;">
     <div class="logo-block">
       <a href="index.html"><img src="dg-icon-logo-v3.webp" alt="Deck Giant logo" class="header-logo-icon" width="400" height="205"></a>
     </div>
     <div class="header-actions">
-      <a href="tel:+17207721511" class="nav-phone"><span class="call-label">Call or Text</span>720.772.1511</a>
+      <a href="tel:+17207721511" class="nav-phone"><span class="call-label">Text or Call</span>720.772.1511</a>
       <a href="contact.html" class="nav-cta">Free Consultation</a>
     </div>
   </div>
   <div class="header-nav">
     <div class="wrap" style="padding:0;">
+      <div class="nav-bar-row">
+        <span class="nav-bar-label">Menu</span>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </label>
+      </div>
       <ul class="nav-links">
         <li><a href="gallery.html">Gallery</a></li>
         <li class="nav-item">
@@ -406,6 +474,7 @@
               <div class="nav-dropdown-inner">
                 <a href="decks.html">Decks</a>
                 <a href="pergolas.html">Pergolas</a>
+                <a href="polycarbonate-pergola-roof-denver.html">Polycarbonate Roofs</a>
                 <a href="carports.html">Carports</a>
                 <a href="pavilions.html">Pavilions</a>
                 <a href="upgrades.html">Upgrades</a>
@@ -545,6 +614,7 @@
         <h3>Services</h3>
         <a href="decks.html">Decks</a>
         <a href="pergolas.html">Pergolas</a>
+        <a href="polycarbonate-pergola-roof-denver.html">Polycarbonate Roofs</a>
         <a href="carports.html">Carports</a>
         <a href="pavilions.html">Pavilions</a>
         <a href="upgrades.html">Upgrades</a>
