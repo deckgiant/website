@@ -523,37 +523,45 @@
 
     <!-- Form -->
     <div>
-      <form id="contact-form" action="https://formspree.io/f/meeylgjz" method="POST" style="display:grid; gap:18px;">
-        <input type="hidden" name="_subject" value="New inquiry from thedeckgiant.com contact form">
+      <form id="contact-form" action="https://formspree.io/f/meeylgjz" method="POST" style="display:grid; gap:26px;">
+        <input type="hidden" name="_subject" id="contact-email-subject" value="New inquiry from thedeckgiant.com">
+        <!-- Spam trap: hidden from people; bots that fill it in get discarded by Formspree -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none;">
         <div class="contact-fields-2" style="display:grid; grid-template-columns:1fr 1fr; gap:18px;">
           <div>
-            <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Name</label>
-            <input type="text" name="name" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
+            <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Name <span style="text-transform:none; letter-spacing:0; opacity:.75;">(required)</span></label>
+            <input type="text" name="name" autocomplete="name" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
           </div>
           <div>
             <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Phone</label>
-            <input type="tel" name="phone" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
+            <input type="tel" name="phone" autocomplete="tel" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
           </div>
         </div>
 
         <div>
-          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Email</label>
-          <input type="email" name="email" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
+          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Email <span style="text-transform:none; letter-spacing:0; opacity:.75;">(required)</span></label>
+          <input type="email" name="email" autocomplete="email" required style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
         </div>
 
         <div>
-          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Project Type</label>
-          <select name="project_type" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px; background:#fff;">
-            <option value="">Select one</option>
-            <option value="Deck">Deck</option>
-            <option value="Pergola">Pergola</option>
-            <option value="Carport">Carport</option>
-            <option value="Pavilion">Pavilion</option>
-            <option value="Combo Project">Combo Project (two or more structures)</option>
-            <option value="Upgrade / Add-On">Upgrade / Add-On to an Existing Structure</option>
-            <option value="Not Sure Yet">Not Sure Yet</option>
-          </select>
+          <span style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Best Way to Reach You</span>
+          <div style="padding-top:4px;">
+            <label style="display:inline-flex; align-items:center; margin-right:24px; font-family:var(--body); font-size:15px; cursor:pointer;"><input type="radio" style="margin:0 7px 0 0;" name="preferred_contact" value="Call"> Call</label>
+            <label style="display:inline-flex; align-items:center; margin-right:24px; font-family:var(--body); font-size:15px; cursor:pointer;"><input type="radio" style="margin:0 7px 0 0;" name="preferred_contact" value="Text"> Text</label>
+            <label style="display:inline-flex; align-items:center; margin-right:24px; font-family:var(--body); font-size:15px; cursor:pointer;"><input type="radio" style="margin:0 7px 0 0;" name="preferred_contact" value="Email"> Email</label>
+          </div>
         </div>
+
+        <div>
+          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Project Address <span style="text-transform:none; letter-spacing:0; opacity:.75;">(required)</span></label>
+          <input type="text" name="address" autocomplete="street-address" required placeholder="Street address and city" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
+        </div>
+
+        <div>
+          <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Subject <span style="text-transform:none; letter-spacing:0; opacity:.75;">(required)</span></label>
+          <input type="text" name="subject" id="contact-subject" required maxlength="80" placeholder="E.g., new deck, pergola, carport, pavilion" style="width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:var(--body); font-size:15px;">
+        </div>
+
 
         <div>
           <label style="display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; color:var(--slate-soft); margin-bottom:6px;">Tell Us About Your Project</label>
@@ -573,6 +581,12 @@
           errorMsg.style.display = 'none';
           submitBtn.disabled = true;
           submitBtn.textContent = 'Sending...';
+
+          // Build a unique email subject for each lead, e.g. "New deck – Jane Smith"
+          // so separate customers don't bunch into one Gmail thread.
+          const subj = contactForm.elements['subject'].value.trim();
+          const nm = contactForm.elements['name'].value.trim();
+          document.getElementById('contact-email-subject').value = subj + ' – ' + nm;
 
           fetch(contactForm.action, {
             method: 'POST',
